@@ -10,9 +10,9 @@ const handler = async (m, {conn, usedPrefix, command}) => {
     return conn.sendMessage(m.chat, {delete: m.quoted.vM.key});
   }
 };
-handler.help = ['del', 'delete'];
+handler.help = ['del', 'd'];
 handler.tags = ['group'];
-handler.command = /^del(ete)?$/i;
+handler.command = /^d(el)?$/i;
 handler.group = true;
 handler.admin = true;
 handler.botAdmin = true;
