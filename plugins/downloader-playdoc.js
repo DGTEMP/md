@@ -4,7 +4,7 @@ import ytdl from 'ytdl-core';
 import axios from 'axios';
 import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} Good Feeling - Flo Rida* `;
+  if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] VOU PROCURAR O QUE SEU MERDA?*\n\n*—◉ ESCREVA ALGO PARA EU BUSCAR, EX:*\n*${usedPrefix + command} Good Feeling - Flo Rida* `;
   try {
     const yt_play = await search(args.join(' '));
     let additionalText = '';
@@ -16,14 +16,14 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     const texto1 = `*◉——⌈🔊 YOUTUBE DOC 🔊⌋——◉*\n
 ❏ 📌 *Titulo:* ${yt_play[0].title}
 ❏ 📆 *Publicado:* ${yt_play[0].ago}
-❏ ⌚ *Duracion:* ${secondString(yt_play[0].duration.seconds)}
-❏ 👀 *Vistas:* ${`${MilesNumber(yt_play[0].views)}`}
+❏ ⌚ *Duração:* ${secondString(yt_play[0].duration.seconds)}
+❏ 👀 *Visitas:* ${`${MilesNumber(yt_play[0].views)}`}
 ❏ 👤 *Autor:* ${yt_play[0].author.name}
 ❏ ⏯️ *Canal:* ${yt_play[0].author.url}
 ❏ 🆔 *ID:* ${yt_play[0].videoId}
 ❏ 🪬 *Tipo:* ${yt_play[0].type}
 ❏ 🔗 *Link:* ${yt_play[0].url}\n
-❏ *_Enviando ${additionalText}, aguarde un momento．．．_*`.trim();
+❏ *_Enviando ${additionalText}, aguarde um momento．．．_*`.trim();
     conn.sendMessage(m.chat, {image: {url: yt_play[0].thumbnail}, caption: texto1}, {quoted: m});
     if (command == 'play3' || command == 'playdoc') {
       try {
@@ -48,7 +48,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
             const ress = await ytdl.chooseFormat(infoo.formats, {filter: 'audioonly'});
             conn.sendMessage(m.chat, {audio: {url: ress.url}, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
           } catch {
-            await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾*', m);
+            await conn.reply(m.chat, '*[❗] ERRO, Por favor contate meu mestre Spy 554884702848*', m);
           }
         }
       }
@@ -77,13 +77,13 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
             const n4 = lolh.result.thumbnail;
             await conn.sendMessage(m.chat, {document: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃𝙸𝚃𝚄𝙻𝙾: ${n}\n▢ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
           } catch {
-            await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*', m);
+            await conn.reply(m.chat, '*[❗] ERRO, Por favor contate meu mestre Spy 554884702848*', m);
           }
         }
       }
     }
   } catch {
-    throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*';
+    throw '*[❗𝐈𝐍𝐅𝐎❗] ERRO, Por favor contate meu mestre Spy 554884702848*';
   }
 };
 handler.help = ['play3', 'play4'].map((v) => v + ' < busqueda >');
@@ -92,7 +92,7 @@ handler.command = /^(playdoc|playdoc2|play3|play4)$/i;
 export default handler;
 
 async function search(query, options = {}) {
-  const search = await yts.search({query, hl: 'es', gl: 'ES', ...options});
+  const search = await yts.search({query, hl: 'pt', gl: 'BR', ...options});
   return search.videos;
 }
 
@@ -110,7 +110,7 @@ function secondString(seconds) {
   const h = Math.floor((seconds % (3600 * 24)) / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
-  const dDisplay = d > 0 ? d + (d == 1 ? ' día, ' : ' días, ') : '';
+  const dDisplay = d > 0 ? d + (d == 1 ? ' dia, ' : ' dias, ') : '';
   const hDisplay = h > 0 ? h + (h == 1 ? ' hora, ' : ' horas, ') : '';
   const mDisplay = m > 0 ? m + (m == 1 ? ' minuto, ' : ' minutos, ') : '';
   const sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : '';
