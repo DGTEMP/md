@@ -1,25 +1,18 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙱𝙾𝚇𝙼𝙸𝙽𝙴 𝙷𝙾𝚂𝚃*
-> Tutorial: https://youtu.be/eC9TfKICpcY
-> Pagina Oficial: https://boxmineworld.com
-> Dashboard: https://dash.boxmineworld.com/home
-> Panel: https://panel.boxmineworld.com
-> Soporte: https://discord.gg/84qsr4v 
+  const text = `*—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙷𝙾𝚂𝚃*
 
-------------------------------------
-—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻-𝚃𝙴𝚁𝙼𝚄𝚇
-> https://youtu.be/yRS4m36Zwkw
+> Panel: https://livepix.gg/luizaa
+> Soporte: https://wa.me/554891941092
 
 ------------------------------------
 
-*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚃𝙴𝚁𝙼𝚄𝚇*
+*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂*
 > Comandos:
 - cd && termux-setup-storage
 - apt-get update -y && apt-get upgrade -y
 - pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn 
-- git clone https://github.com/BrunoSobrino/TheMystic-Bot-MD.git && cd TheMystic-Bot-MD
 - yarn install
 - npm install
 - npm update
@@ -27,20 +20,12 @@ const handler = async (m, {conn, usedPrefix}) => {
 
 ------------------------------------
 
-—◉ ✔️ ACTIVAR EN CASO DE DETENERSE EN TERMUX ✔️
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd TheMystic-Bot-MD
-> npm start
+—◉ ✔️ ATIVAR ✔️
 
-------------------------------------
-
-—◉ 👽 OBTENER OTRO CODIGO QR EN TERMUX 👽
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd TheMystic-Bot-MD
-> rm -rf MysticSession
+> cd TheSpy-Bot-MD
 > npm start`.trim();
   const buttonMessage= {
-    'document': {url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`},
+    'document': {url: `https://wa.me/554848702848`},
     'mimetype': `application/${document}`,
     'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
     'fileLength': 99999999999999,
@@ -49,13 +34,13 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
       'forwardingScore': 200,
       'isForwarded': true,
       'externalAdReply': {
-        'mediaUrl': 'https://github.com/BrunoSobrino/TheMystic-Bot-MD',
+        'mediaUrl': 'https://wa.me/554848702848',
         'mediaType': 2,
         'previewType': 'pdf',
-        'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
+        'title': 'ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
         'body': wm,
         'thumbnail': imagen1,
-        'sourceUrl': 'https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA'}},
+        'sourceUrl': 'https://wa.me/554848702848'}},
     'caption': text,
     'footer': wm,
     // 'buttons':[
