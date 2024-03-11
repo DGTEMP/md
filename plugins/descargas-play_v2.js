@@ -6,7 +6,7 @@ let fileName;
 let apiUrl;
 let enviando = false;
 const handler = async (m, { command, usedPrefix, conn, text }) => {
-  if (!text) throw `_*< DESCARGAS - PLAY v2 />*_\n\n*[ ℹ️ ] Hace falta el título del video de YouTube.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_\n\n*[ 💡 ] Ejemplo 2:* _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeS9fJvS_OkDk7p_`;
+  if (!text) throw `_*< SPY - PLAY v2 />*_\n\n*[ ℹ️ ] Cadê o título ou link do YouTube irmão?*\n\n*[ 💡 ] Exemplo:* _${usedPrefix + command} Rainha da pista - ConeCrew_\n\n*[ 💡 ] Exemplo 2:* _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeSfJvS_OkDk7p_`;
 if (enviando) return;
     enviando = true
   try {
@@ -27,7 +27,7 @@ if (enviando) return;
 
     if (!data.resultado || !data.resultado.url) {
       enviando = false;
-      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+      throw `_*< SPY - PLAY V2 />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848*`;
     } else {
       try {      
         if (command === 'play.1') { // play.1 con CFROS API v1 ytmp3
@@ -56,12 +56,12 @@ if (enviando) return;
             }
           } catch {
             enviando = false;
-            throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+            throw `_*< SPY - PLAY V2 />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848*`;
           }
        }
     }
 
-    const dataMessage = `_*< DESCARGAS - PLAY V2 />*_\n\n▢ *Título:* ${data.resultado.title}\n\n▢ *Publicado:* ${data.resultado.publicDate}\n\n▢ *Canal:* ${data.resultado.channel}\n\n▢ *Vídeo URL:* ${data.resultado.url}`;
+    const dataMessage = `_*< SPY - PLAY V2 />*_\n\n▢ *Título:* ${data.resultado.title}\n\n▢ *Publicado:* ${data.resultado.publicDate}\n\n▢ *Canal:* ${data.resultado.channel}\n\n▢ *Vídeo URL:* ${data.resultado.url}`;
     await conn.sendMessage(m.chat, { text: dataMessage }, { quoted: m });
 
     if (buff) {
@@ -69,11 +69,11 @@ if (enviando) return;
       enviando = false;
     } else {
       enviando = false;
-      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+      throw `_*< SPY - PLAY V2 />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848*`;
     }
   } catch (error) {
     enviando = false;
-    throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+    throw `_*< SPY - PLAY V2 />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848*`;
   }
 };
 handler.command = ['play.1', 'play.2'];
