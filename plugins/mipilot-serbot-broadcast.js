@@ -4,15 +4,15 @@ const handler = async (m, {conn, usedPrefix, text}) => {
   const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn.user.jid)])];
   const cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m;
   const teks = text ? text : cc.text;
-  const content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 DIFUSION A SUB BOTS 〕*\n\n' + teks);
+  const content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 SUB BOTS 〕*\n\n' + teks);
   for (const id of users) {
     await delay(1500);
     await conn.copyNForward(id, content, true);
   }
-  conn.reply(m.chat, `*Difusión enviada con éxito a ${users.length} sub bots*
+  conn.reply(m.chat, `*Enviado com êxito a ${users.length} sub bots*
     
   ${users.map((v) => '👉🏻 wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${encodeURIComponent(usedPrefix)}estado`).join('\n')}
-  \n*Se finalizo con el envió en ${users.length * 1.5} segundos aproximadamente*`.trim(), m);
+  \n*Foi finalizado o envio em ${users.length * 1.5} segundos aproximadamente*`.trim(), m);
 };
 handler.command = /^bcbot$/i;
 handler.rowner = true;
