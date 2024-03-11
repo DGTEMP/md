@@ -949,7 +949,7 @@ export async function handler(chatUpdate) {
         if (!('antiLink2' in chat)) chat.antiLink2 = false;
         if (!('antiviewonce' in chat)) chat.antiviewonce = false;
         if (!('antiToxic' in chat)) chat.antiToxic = false;
-        if (!('antiTraba' in chat)) chat.antiTraba = false;
+        if (!('antiTraba' in chat)) chat.antiTraba = true;
         if (!('antiArab' in chat)) chat.antiArab = false;
         if (!('antiArab2' in chat)) chat.antiArab2 = false;
         if (!('antiporno' in chat)) chat.antiporno = false;
@@ -968,14 +968,14 @@ export async function handler(chatUpdate) {
           sPromote: '',
           sDemote: '',
           antidelete: false,
-          modohorny: true,
+          modohorny: false,
           autosticker: false,
-          audios: true,
+          audios: false,
           antiLink: false,
           antiLink2: false,
           antiviewonce: false,
           antiToxic: false,
-          antiTraba: false,
+          antiTraba: true,
           antiArab: false,
 	  antiArab2: false,
 	  antiporno: false,
@@ -996,7 +996,7 @@ export async function handler(chatUpdate) {
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
 	if (!('modejadibot' in settings)) settings.modejadibot = true;
         if (!('antispam' in settings)) settings.antispam = false;
-	if (!('audios_bot' in settings)) settings.audios_bot = true;  
+	if (!('audios_bot' in settings)) settings.audios_bot = false;  
 	if (!('modoia' in settings)) settings.modoia = false;      
       } else {
         global.db.data.settings[this.user.jid] = {
@@ -1008,7 +1008,7 @@ export async function handler(chatUpdate) {
           antiPrivate: false,
 	  modejadibot: true,
           antispam: false,
-	  audios_bot: true,
+	  audios_bot: false,
 	  modoia: false
         };
       }
@@ -1184,8 +1184,8 @@ export async function handler(chatUpdate) {
               const messageNumber = user.bannedMessageCount + 1;
 const messageText = `_*< USUARIO SUSPENDIDO />*_\n
  ▢ *Aviso:* ${messageNumber}/3
- ${user.bannedReason ? `\n▢ *Motivo:* ${user.bannedReason}` : ' ▢ *Motivo:* Sin especificar'}
- *[ ℹ️ ] Si consideras que esto es un error y cuentas con pruebas, puedes comunicarte con el propietario(a) del bot para apelar la suspensión.*`.trim();
+ ${user.bannedReason ? `\n▢ *Motivo:* ${user.bannedReason}` : ' ▢ *Motivo:* _Tu sabe o motivo seu merda_'}
+ *[ ℹ️ ] Se acreditas ser um erro e tens provas, podes comunicar com o Spy 554884702848.*`.trim();
               m.reply(messageText);
               user.bannedMessageCount++;
             } else if (user.bannedMessageCount === 3) {
@@ -1266,11 +1266,11 @@ const messageText = `_*< USUARIO SUSPENDIDO />*_\n
           m.exp += xp;
         }
         if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-          mconn.conn.reply(m.chat, `*[ ℹ️ ] Sus diamantes se han agotado, puede adquirir más con el comando:* _${usedPrefix}buyall_`, m);
+          mconn.conn.reply(m.chat, `*[ ℹ️ ] Tas sem grana liso, podes adquirir mais com o comando:* _${usedPrefix}buyall_`, m);
           continue; 
         }
         if (plugin.level > _user.level) {
-          mconn.conn.reply(m.chat, `*[ ℹ️ ] Se require tener el nivel ${plugin.level} para poder utilizar el comando. Tú nivel actual es ${_user.level}, usa el comando ${usedPrefix}lvl para subir tu nivel con XP.*`, m);
+          mconn.conn.reply(m.chat, `*[ ℹ️ ] Só com nível ${plugin.level} para poder utilizar esse comando. Teu nível atual é ${_user.level}, use o comando ${usedPrefix}lvl para subir teu nível XP.*`, m);
           continue; 
         }
         const extra = {
@@ -1434,13 +1434,13 @@ export async function participantsUpdate({id, participants, action}) {
             const userPrefix = antiArab.some((prefix) => user.startsWith(prefix));
             const botTt2 = groupMetadata.participants.find((u) => m.conn.decodeJid(u.id) == m.conn.user.jid) || {};
             const isBotAdminNn = botTt2?.admin === 'admin' || false;
-            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
-                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]);
+            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Salve salve, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*Papai Spy domina bb*') :
+                              (chat.sBye || this.bye || conn.bye || 'Flw, @user!')).replace('@user', '@' + user.split('@')[0]);
             if (userPrefix && chat.antiArab && botTt.restrict && isBotAdminNn && action === 'add') {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
               if (responseb[0].status === '404') return;
               const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} ᴇɴ ᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇɴ ɴᴜᴍᴇʀᴏs ᴀʀᴀʙᴇs ᴏ ʀᴀʀᴏs, ᴘᴏʀ ʟᴏ ϙᴜᴇ sᴇ ᴛᴇ sᴀᴄᴀʀᴀ ᴅᴇʟ ɢʀᴜᴘᴏ*`, mentions: [user]}, {quoted: fkontak2});
+              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} ɴᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇɴ ɴᴜᴍᴇʀᴏs ʀᴀʀᴏs*`, mentions: [user]}, {quoted: fkontak2});
               return;
             }
             await m.conn.sendFile(id, apii.data, 'pp.jpg', text, null, false, {mentions: [user]});
@@ -1481,10 +1481,10 @@ export async function groupsUpdate(groupsUpdate) {
     if (groupUpdate.subjectTime) continue;
     const chats = global.db.data.chats[id]; let text = '';
     if (!chats?.detect) continue;
-    if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc);
-    if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject);
-    if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon);
-    if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke);
+    if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Descrição alterada```\n@desc').replace('@desc', groupUpdate.desc);
+    if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Novo nome```\n@subject').replace('@subject', groupUpdate.subject);
+    if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon alterado```').replace('@icon', groupUpdate.icon);
+    if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Novo link```\n@revoke').replace('@revoke', groupUpdate.revoke);
     if (!text) continue;
     await mconn.conn.sendMessage(id, {text, mentions: mconn.conn.parseMention(text)});
   }
@@ -1496,11 +1496,11 @@ export async function callUpdate(callUpdate) {
   for (const nk of callUpdate) {
     if (nk.isGroup == false) {
       if (nk.status == 'offer') {
-        const callmsg = await mconn.conn.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
+        const callmsg = await mconn.conn.reply(nk.from, `Dae *@${nk.from.split('@')[0]}*, as ${nk.isVideo ? 'videochamadas' : 'chamadas'} não estão permitidas, serás bloqueado.\n-\nSe foi um equívoco, contate meu mestre 554884702848!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑;;;\nFN:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nORG:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nTITLE:\nitem1.TEL;waid=5219992095479:+521 999 209 5479\nitem1.X-ABLabel:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nEND:VCARD`;
-        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑', contacts: [{vcard}]}}, {quoted: callmsg});
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Spy 👑;;;\nFN:Spy 👑\nORG:Spy 👑\nTITLE:\nitem1.TEL;waid=554884702848:+55 48 8470 2848\nitem1.X-ABLabel:Spy 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:Spy 👑\nEND:VCARD`;
+        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'Spy 👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
     }
@@ -1522,9 +1522,9 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 	const antideleteMessage = `_*< ANTI-DELETE />*_\n
  ▢ *Usuario:* @${participant.split`@`[0]}
  ▢ *Hora:* ${time}
- ▢ *Fecha:* ${date}\n
- ▢ *Enviando el mensaje eliminado...*\n
- *[ ℹ️ ] Para desactivar la función* _antidelete_*, envia el siguiente comando:* _/disable antidelete_`.trim();
+ ▢ *Data:* ${date}\n
+ ▢ *Enviando mensagem eliminada...*\n
+ *[ ℹ️ ] Para desativar essa função* use o comando:* _/false antidelete_`.trim();
         await mconn.conn.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
         mconn.conn.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
@@ -1534,16 +1534,16 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '*[ ℹ️ ] Este comando solo puede ser utilizado por el propietario del bot.*',
-    owner: '*[ ℹ️ ] Este comando solo puede ser utilizado por el propietario del bot.*',
-    mods: '*[ ℹ️ ] Este comando solo puede ser utilizado por moderadores y el propietario del bot.*',
-    premium: '*[ ℹ️ ] Este comando solo puede ser utilizado por usurios premium y el propietario del bot.*',
-    group: '*[ ℹ️ ] Este comando solo puede ser utilizado en grupos.*',
-    private: '*[ ℹ️ ] Este comando solo puede ser utilizado en el chat privado del bot.*',
-    admin: '*[ ℹ️ ] Este comando solo puede ser usado por administradores del grupo.*',
-    botAdmin: '*[ ℹ️ ] Para utilizar este comando es necesario que el bot sea administrador del grupo.*',
-    unreg: '*[ ℹ️ ] Para utilizar este comando debes estar registrado.*\n\n*[ 💡 ] Utiliza el comando:* _/verificar nombre.edad_ *para registrarte.*',
-    restrict: '*[ ℹ️ ] Este comando fue desactivado por el propietario del bot.*',
+    rowner: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy.*',
+    owner: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy.*',
+    mods: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy e moderadores do bot.*',
+    premium: '*[ ℹ️ ] Só para premuim seu merda.*',
+    group: '*[ ℹ️ ] Só em grupos.*',
+    private: '*[ ℹ️ ] Só pv.*',
+    admin: '*[ ℹ️ ] Se ponha no seu lugar membro comum, esse comando é apenas para seres superiores.*',
+    botAdmin: '*[ ℹ️ ] Nem sou admin nessa porra, vou fazer isso como seu jaguara.*',
+    unreg: '*[ ℹ️ ] Faz o login ai irmão.*\n\n*[ 💡 ] Use o comando:* _/verificar nome.idade_ *para registrar.*',
+    restrict: '*[ ℹ️ ] Desativado por Spy.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
   const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Advertencia*', body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}, aa);
