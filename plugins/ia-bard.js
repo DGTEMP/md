@@ -16,7 +16,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
       const respuestaAPI = data.data;
       conn.reply(m.chat, respuestaAPI, m);
     } else {
-      throw '_*< SPY - IA - BARD - GEMINY />*_\n\n*[ ℹ️ ] Não consegui encontrar uma resposta válida.*';
+      throw '_*< SPY - IA - BARD - GEMINI />*_\n\n*[ ℹ️ ] Não consegui encontrar uma resposta válida.*';
     }
   } catch (error) {
     throw `_*< SPY - IA - BARD />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848.*`;
