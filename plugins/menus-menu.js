@@ -21,29 +21,28 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏
+    const str = `_*SPY*_ - 𝘽𝙊𝙏
 
- ▢ *Hola,* ${taguser}
+ ▢ *Salve,* ${taguser}
 
- _*< TUS ESTADÍSTICAS />*_
+_*Spy domina*_
+
+*Número: 554884702848*
+*Server: livepix.gg/luizaa*
+
+
+ _*< TUAS ESTATÍSTICAS />*_
 
  ▢ *Nivel:* ${level}
- ▢ *Experiencia:* ${exp}
- ▢ *Rango:* ${role}
- ▢ *Diamantes:* ${limit}
- ▢ *MysticCoins:* ${money}
+ ▢ *Experiência:* ${exp}
+ ▢ *Patente:* ${role}
+ ▢ *Grana:* ${limit}
+ ▢ *SpyCoins:* ${money}
  ▢ *Tokens:* ${joincount}
  ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
 
-  _*< LISTA DE MENUS />*_
-  
-  ▢ _${usedPrefix}menuaudios_
-  ▢ _${usedPrefix}menuanimes_
-  ▢ _${usedPrefix}labiblia_ (🔞)
-
- 
- _*< SOBRE EL BOT />*_
+ _*< BOT />*_
 
   ▢ _${usedPrefix}terminosycondiciones_
   ▢ _${usedPrefix}grupos_
@@ -84,76 +83,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}disable antiprivado_
   
 
- _*< JUEGOS />*_
-
-  ▢ _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
-  ▢ _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
-  ▢ _${usedPrefix}ppt *<papel / tijera /piedra>*_
-  ▢ _${usedPrefix}prostituto *<nombre / @tag>*_
-  ▢ _${usedPrefix}prostituta *<nombre / @tag>*_
-  ▢ _${usedPrefix}gay2 *<nombre / @tag>*_
-  ▢ _${usedPrefix}lesbiana *<nombre / @tag>*_
-  ▢ _${usedPrefix}pajero *<nombre / @tag>*_
-  ▢ _${usedPrefix}pajera *<nombre / @tag>*_
-  ▢ _${usedPrefix}puto *<nombre / @tag>*_
-  ▢ _${usedPrefix}puta *<nombre / @tag>*_
-  ▢ _${usedPrefix}manco *<nombre / @tag>*_
-  ▢ _${usedPrefix}manca *<nombre / @tag>*_
-  ▢ _${usedPrefix}rata *<nombre / @tag>*_
-  ▢ _${usedPrefix}love *<nombre / @tag>*_
-  ▢ _${usedPrefix}doxear *<nombre / @tag>*_
-  ▢ _${usedPrefix}pregunta *<txt>*_
-  ▢ _${usedPrefix}suitpvp *<@tag>*_
-  ▢ _${usedPrefix}slot *<apuesta>*_
-  ▢ _${usedPrefix}ttt *<nombre sala>*_
-  ▢ _${usedPrefix}delttt_
-  ▢ _${usedPrefix}acertijo_
-  ▢ _${usedPrefix}simi *<txt>*_
-  ▢ _${usedPrefix}top *<txt>*_
-  ▢ _${usedPrefix}topgays_
-  ▢ _${usedPrefix}topotakus_
-  ▢ _${usedPrefix}formarpareja_
-  ▢ _${usedPrefix}verdad_
-  ▢ _${usedPrefix}reto_
-  ▢ _${usedPrefix}cancion_
-  ▢ _${usedPrefix}pista_
-  ▢ _${usedPrefix}akinator_
-  ▢ _${usedPrefix}ruleta
-  ▢ _${usedPrefix}suerte
-  ▢ _${usedPrefix}wordfind_
-
-
- _*< ACT./DESACT. FUNC. />*_
-
-  ▢ _${usedPrefix}enable *welcome*_
-  ▢ _${usedPrefix}disable *welcome*_
-  ▢ _${usedPrefix}enable *modohorny*_
-  ▢ _${usedPrefix}disable *modohorny*_
-  ▢ _${usedPrefix}enable *antilink*_
-  ▢ _${usedPrefix}disable *antilink*_
-  ▢ _${usedPrefix}enable *antilink2*_
-  ▢ _${usedPrefix}disable *antilink2*_
-  ▢ _${usedPrefix}enable *detect*_
-  ▢ _${usedPrefix}disable *detect*_
-  ▢ _${usedPrefix}enable *audios*_
-  ▢ _${usedPrefix}disable *audios*_
-  ▢ _${usedPrefix}enable *autosticker*_
-  ▢ _${usedPrefix}disable *autosticker*_
-  ▢ _${usedPrefix}enable *antiviewonce*_
-  ▢ _${usedPrefix}disable *antiviewonce*_
-  ▢ _${usedPrefix}enable *antitoxic*_
-  ▢ _${usedPrefix}disable *antitoxic*_
-  ▢ _${usedPrefix}enable *antitraba*_
-  ▢ _${usedPrefix}disable *antitraba*_
-  ▢ _${usedPrefix}enable *antiarabes*_
-  ▢ _${usedPrefix}disable *antiarabes*_
-  ▢ _${usedPrefix}enable *modoadmin*_
-  ▢ _${usedPrefix}disable *modoadmin*_
-  ▢ _${usedPrefix}enable *antidelete*_
-  ▢ _${usedPrefix}disable *antidelete*_
-
-
- _*< DESCARGAS />*_
+ _*< DOWNLOADS  />*_
 
  ▢ _${usedPrefix}play *<txt>*_
  ▢ _${usedPrefix}play2 *<txt>*_
@@ -212,8 +142,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}kick2 *<@tag>*_
   ▢ _${usedPrefix}listanum *<txt>*_
   ▢ _${usedPrefix}kicknum *<txt>*_
-  ▢ _${usedPrefix}grupo *<abrir/cerrar>*_
-  ▢ _${usedPrefix}grouptime *<opcion> <tiempo>*_
+  ▢ _${usedPrefix}grupo *<a/f>*_
+  ▢ _${usedPrefix}grouptime *<opc> <tempo>*_
   ▢ _${usedPrefix}promote *<@tag>*_
   ▢ _${usedPrefix}demote *<@tag>*_
   ▢ _${usedPrefix}infogroup_
@@ -234,10 +164,10 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}fantasmas_
   ▢ _${usedPrefix}destraba_
   ▢ _${usedPrefix}setpp *<img>*_
-  ▢ _admins *<txt>*_ (sin prefijo)
+  ▢ _admins *<txt>*_ (sem prefixo)
 
 
- _*< CONVERTIDORES />*_
+ _*< CONVERTEDORES />*_
 
   ▢ _${usedPrefix}toanime *<img>*_
   ▢ _${usedPrefix}togifaud *<video>*_
@@ -251,7 +181,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}tts *<efecto> <txt>*_
 
 
- _*< EFECTOS & LOGOS />*_
+ _*< EFEITOS & LOGOS />*_
 
   ▢ _${usedPrefix}logos *<efecto> <txt>*_
   ▢ _${usedPrefix}logochristmas *<txt>*_
@@ -304,9 +234,9 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}randomprofile_
 
 
- _*< EFECTOS P. AUDIOS />*_
+ _*< EFEITOS P. AUDIOS />*_
 
-*- Responde a un audio o nota de voz.*
+*- Responda um audio ou nota de voz.*
 
   ▢ _${usedPrefix}bass_
   ▢ _${usedPrefix}blown_
@@ -322,14 +252,14 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}tupai_
 
 
- _*< CHAT ANÓNIMO />*_
+ _*< CHAT ANÔNIMO />*_
 
   ▢ _${usedPrefix}start_
   ▢ _${usedPrefix}next_
   ▢ _${usedPrefix}leave_
 
 
- _*< HERRAMIENTAS />*_
+ _*< FERRAMENTAS />*_
  
   ▢ _${usedPrefix}inspect *<wagc_url>*_
   ▢ _${usedPrefix}chatgpt *<txt>*_
@@ -352,7 +282,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}qrcode *<txt>*_
   ▢ _${usedPrefix}readmore *<txt1|txt2>*_
   ▢ _${usedPrefix}styletext *<txt>*_
-  ▢ _${usedPrefix}traducir *<txt>*_
+  ▢ _${usedPrefix}trad *<txt>*_
   ▢ _${usedPrefix}nowa *num>*_
   ▢ _${usedPrefix}covid *<pais>*_
   ▢ _${usedPrefix}horario_
@@ -362,7 +292,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}img *<txt>*_
 
 
- _*< ECONOMÍA />*_
+ _*< ECONÔMIA />*_
 
   ▢ _${usedPrefix}adventure_
   ▢ _${usedPrefix}cazar_
@@ -415,14 +345,90 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}stickermarker *<efecto> <img>*_
   ▢ _${usedPrefix}stickerfilter *<efecto> <img>*_
 
+  
+ _*< JOGOS />*_
 
- _*< PROPIETARIO Y MODS. />*_
+  ▢ _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
+  ▢ _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
+  ▢ _${usedPrefix}ppt *<papel / tijera /piedra>*_
+  ▢ _${usedPrefix}prostituto *<nombre / @tag>*_
+  ▢ _${usedPrefix}prostituta *<nombre / @tag>*_
+  ▢ _${usedPrefix}gay2 *<nombre / @tag>*_
+  ▢ _${usedPrefix}lesbiana *<nombre / @tag>*_
+  ▢ _${usedPrefix}pajero *<nombre / @tag>*_
+  ▢ _${usedPrefix}pajera *<nombre / @tag>*_
+  ▢ _${usedPrefix}puto *<nombre / @tag>*_
+  ▢ _${usedPrefix}puta *<nombre / @tag>*_
+  ▢ _${usedPrefix}manco *<nombre / @tag>*_
+  ▢ _${usedPrefix}manca *<nombre / @tag>*_
+  ▢ _${usedPrefix}rata *<nombre / @tag>*_
+  ▢ _${usedPrefix}love *<nombre / @tag>*_
+  ▢ _${usedPrefix}doxear *<nombre / @tag>*_
+  ▢ _${usedPrefix}pregunta *<txt>*_
+  ▢ _${usedPrefix}suitpvp *<@tag>*_
+  ▢ _${usedPrefix}slot *<apuesta>*_
+  ▢ _${usedPrefix}ttt *<nombre sala>*_
+  ▢ _${usedPrefix}delttt_
+  ▢ _${usedPrefix}acertijo_
+  ▢ _${usedPrefix}simi *<txt>*_
+  ▢ _${usedPrefix}top *<txt>*_
+  ▢ _${usedPrefix}topgays_
+  ▢ _${usedPrefix}topotakus_
+  ▢ _${usedPrefix}formarpareja_
+  ▢ _${usedPrefix}verdad_
+  ▢ _${usedPrefix}reto_
+  ▢ _${usedPrefix}cancion_
+  ▢ _${usedPrefix}pista_
+  ▢ _${usedPrefix}akinator_
+  ▢ _${usedPrefix}ruleta
+  ▢ _${usedPrefix}suerte
+  ▢ _${usedPrefix}wordfind_
 
-  ▢ _> *<funcion>*_
-  ▢ _=> *<funcion>*_
-  ▢ _$ *<funcion>*_
+
+ _*< ATV./DST. FUNC. />*_
+
+  ▢ _${usedPrefix}true *welcome*_
+  ▢ _${usedPrefix}false *welcome*_
+  ▢ _${usedPrefix}true *modohorny*_
+  ▢ _${usedPrefix}false *modohorny*_
+  ▢ _${usedPrefix}true *antilink*_
+  ▢ _${usedPrefix}false *antilink*_
+  ▢ _${usedPrefix}true *antilink2*_
+  ▢ _${usedPrefix}false *antilink2*_
+  ▢ _${usedPrefix}true *detect*_
+  ▢ _${usedPrefix}false *detect*_
+  ▢ _${usedPrefix}true *audios*_
+  ▢ _${usedPrefix}false *audios*_
+  ▢ _${usedPrefix}true *autosticker*_
+  ▢ _${usedPrefix}false *autosticker*_
+  ▢ _${usedPrefix}true *antiviewonce*_
+  ▢ _${usedPrefix}false *antiviewonce*_
+  ▢ _${usedPrefix}true *antitoxic*_
+  ▢ _${usedPrefix}false *antitoxic*_
+  ▢ _${usedPrefix}true *antitraba*_
+  ▢ _${usedPrefix}false *antitraba*_
+  ▢ _${usedPrefix}true *antiarabes*_
+  ▢ _${usedPrefix}false *antiarabes*_
+  ▢ _${usedPrefix}true *modoadmin*_
+  ▢ _${usedPrefix}false *modoadmin*_
+  ▢ _${usedPrefix}true *antidelete*_
+  ▢ _${usedPrefix}false *antidelete*_
+
+
+  _*< LISTA DE MENUS />*_
+  
+  ▢ _${usedPrefix}menuaudios_
+  ▢ _${usedPrefix}menuanimes_
+  ▢ _${usedPrefix}labiblia_ (🔞)
+
+ 
+ _*< SPY & MODS. />*_
+
+  ▢ _> *<função>*_
+  ▢ _=> *<função>*_
+  ▢ _$ *<função>*_
   ▢ _${usedPrefix}dsowner_
-  ▢ _${usedPrefix}setprefix *<prefijo>*_
+  ▢ _${usedPrefix}setprefix *<prefixo>*_
   ▢ _${usedPrefix}resetprefix_
   ▢ _${usedPrefix}autoadmin_
   ▢ _${usedPrefix}grouplist_
