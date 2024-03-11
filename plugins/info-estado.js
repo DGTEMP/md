@@ -25,29 +25,29 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'The Mystic Bot';
   const info = ` _*< INFO - ESTADO />*_
 
- ▢ *Prop.:* Bruno Sobrino
- ▢ *WA:* +5219992095479
- ▢ *PayPal:* paypal.me/TheShadowBrokers133
+ ▢ *Prop.:* @PapaiSpy
+ ▢ *WA:* +554884702848
+ ▢ *Server:* livepix.gg/luizaa
 
  ▢ *Ping:* ${rtime}
  ▢ *Uptime:* ${uptime}
- ▢ *Prefijo:* ${usedPrefix}
+ ▢ *Prefixo:* ${usedPrefix}
  ▢ *Modo:* ${self ? "privado" : "público"}
  ▢ *Usuarios regs.:* ${totalusrReg}
- ▢ *Usuarios totales:* ${totalusr}
+ ▢ *Usuarios totais:* ${totalusr}
  ▢ *Tipo de bot:* ${(conn.user.jid == global.conn.user.jid ? '' : `Sub-bot de:\n ▢ +${global.conn.user.jid.split`@`[0]}`) || 'No es sub-bot'}
  
  ▢ *Chats privados:* ${chats.length - groups.length}
  ▢ *Grupos:* ${groups.length}
- ▢ *Chats totales:* ${chats.length}
+ ▢ *Chats totais:* ${chats.length}
  
- ▢ *Autoread:* ${autoread ? "activo" : "desactivado"}
- ▢ *Restrict:* ${restrict ? "activo" : "desactivado"}
- ▢ *PCOnly:* ${pconly ? "activado" : "desactivado"}
- ▢ *GPOnly:* ${gconly ? "activado" : "desactivado"}
- ▢ *AntiPrivado:* ${antiprivado ? "activado" : "desactivado"}
- ▢ *AntiLlamada:* ${antiCall ? "activado" : "desactivado"}
- ▢ *ModeJadiBot:* ${modejadibot ? "activado" : "desactivado"}`.trim();
+ ▢ *Autoread:* ${autoread ? "ativo" : "desativado"}
+ ▢ *Restrict:* ${restrict ? "ativo" : "desativado"}
+ ▢ *Somente Privado:* ${pconly ? "activado" : "desativado"}
+ ▢ *Somente Grupo:* ${gconly ? "activado" : "desativado"}
+ ▢ *AntiPrivado:* ${antiprivado ? "ativado" : "desativado"}
+ ▢ *Antichamada:* ${antiCall ? "ativado" : "desativado"}
+ ▢ *ModoSUB:* ${modejadibot ? "ativado" : "desativado"}`.trim();
   const doc = [
     "pdf",
     "zip",
@@ -57,7 +57,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+    document: { url: `https://github.com/SpyHackera/The-Bot-MD` },
     mimetype: `application/${document}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
@@ -66,13 +66,13 @@ const handler = async (m, { conn, usedPrefix }) => {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+        mediaUrl: "https://wa.me/554884702848",
         mediaType: 2,
         previewType: "pdf",
-        title: "The Mystic - Bot",
+        title: "The Spy - Bot",
         body: "Repositorio - GitHub",
         thumbnail: imagen1,
-        sourceUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+        sourceUrl: "https://wa.me/554884702848",
       },
     },
     caption: info,
