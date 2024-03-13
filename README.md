@@ -31,6 +31,6 @@ npm start
 
 
 ## `▢ EDITOR & PROPIETARIO DEL BOT` 
-<a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="250" height="250" alt="BrunoSobrino"/></a>
+<a href="https://github.com/SpyHackera"><img src="https://github.com/SpyHackera.png" width="250" height="250" alt="Spy"/></a>
   
-`TheMystic-Bot-MD - By Bruno Sobrino`
+`TheSpy-Bot-MD - By SpyHacker`
