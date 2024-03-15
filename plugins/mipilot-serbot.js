@@ -2,15 +2,6 @@
 
 ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠
 
-El codigo de este archivo esta totalmente hecho por:
-- Aiden_NotLogic (https://github.com/ferhacks)
-
-El codigo de este archivo fue creado para:
-- TheMystic-Bot-MD (https://github.com/BrunoSobrino/TheMystic-Bot-MD)
-
-El codigo de este archivo fue parchado por:
-- ReyEndymion (https://github.com/ReyEndymion)
-- BrunoSobrino (https://github.com/BrunoSobrino)
 
 ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠
 

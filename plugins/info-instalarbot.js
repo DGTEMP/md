@@ -4,18 +4,27 @@ const handler = async (m, {conn, usedPrefix}) => {
   const text = `*—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙷𝙾𝚂𝚃*
 
 > Panel: https://livepix.gg/luizaa
-> Soporte: https://wa.me/554891941092
+
+> Suporte: https://wa.me/554891941092
 
 ------------------------------------
 
 *—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂*
+
 > Comandos:
+
 - cd && termux-setup-storage
+
 - apt-get update -y && apt-get upgrade -y
+
 - pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn 
+
 - yarn install
+
 - npm install
+
 - npm update
+
 - npm start
 
 ------------------------------------
@@ -23,6 +32,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 —◉ ✔️ ATIVAR ✔️
 
 > cd TheSpy-Bot-MD
+
 > npm start`.trim();
   const buttonMessage= {
     'document': {url: `https://wa.me/554848702848`},
@@ -37,7 +47,7 @@ const handler = async (m, {conn, usedPrefix}) => {
         'mediaUrl': 'https://wa.me/554848702848',
         'mediaType': 2,
         'previewType': 'pdf',
-        'title': 'ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
+        'title': 'SPY - BOT - MD⁩',
         'body': wm,
         'thumbnail': imagen1,
         'sourceUrl': 'https://wa.me/554848702848'}},

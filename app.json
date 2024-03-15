@@ -1,10 +1,10 @@
 {
-  "name": "TheMystic-Bot-MD",
-  "website": "https://github.com/BrunoSobrino",
+  "name": "TheSpy-Bot",
+  "website": "https://github.com/SpyHackera",
   "description": "Subscribete a The Shadow Borkers - Bot (≧▽≦)",
-  "repository": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
-  "logo": "https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/pictures/heroku-icon.jpg",
-  "success_url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "repository": "https://github.com/SpyHackera/TheSpy-Bot",
+  "logo": "https://raw.githubusercontent.com/SpyHackera/TheSpy-Bot/master/src/pictures/heroku-icon.jpg",
+  "success_url": "https://github.com/SpyHackera/TheSpy-Bot",
   "keywords": [
     "nodejs",
     "heroku",
@@ -19,10 +19,10 @@
     "md",
     "whatsappbot",
     "oficial",
-    "whatsapp-md",
-    "themysticbot",
-    "themystic-bot",
-    "themystic-bot-md"],
+    "whatsapp",
+    "theSpybot",
+    "theSpy-bot",
+    "theSpy-bot"],
   "image": "heroku/nodejs",
   "buildpacks": [
     {

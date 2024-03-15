@@ -4,15 +4,15 @@ const handler = async (m, {conn, isPrems}) => {
   enviando = true
   const hasil = Math.floor(Math.random() * 5000);
   const time = global.db.data.users[m.sender].lastwork + 600000;
-  if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `⚔️ *¡Espera un momento pequeño aventurero!* ⚔️\n\n*—◉ Regresa a la travesía en ${msToTime(time - new Date())} ⏳*`;
-  conn.sendMessage(m.chat, {text: `🏞️ *Te embarcas en una emocionante aventura:*\n\n🛠️ *${pickRandom(global.work)}*\n\n*¡Ganaste ${hasil} exp por tu valentía!*`}, {quoted: m});
+  if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `⚔️ *Espere um momento pequeno aventureiro!* ⚔️\n\n*—◉ Retorno à travessia em ${msToTime(time - new Date())} ⏳*`;
+  conn.sendMessage(m.chat, {text: `🏞️ *Agora vais embarcar em uma emocionante aventura:*\n\n🛠️ *${pickRandom(global.work)}*\n\n*Ganhasse ${hasil} exp por tua bravura!*`}, {quoted: m});
   global.db.data.users[m.sender].exp += hasil;
   global.db.data.users[m.sender].lastwork = new Date() * 1;
   enviando = false
 };
 handler.help = ['work'];
 handler.tags = ['xp'];
-handler.command = /^(work|trabajar|chambear)$/i
+handler.command = /^(w|trabalhar|trab)$/i
 handler.fail = null;
 export default handler;
 
@@ -32,49 +32,45 @@ function pickRandom(list) {
 }
 
 global.work = [
-  'Eres un maestro alquimista, destilando misteriosas pociones en busca de secretos perdidos.',
-  'Te conviertes en un intrépido cazador de tesoros, explorando lugares olvidados en busca de riquezas escondidas.',
-  'Diriges un negocio de transmutación de metales, convirtiendo lo común en valiosos tesoros.',
-  'Exploras antiguas ruinas y encuentras una reliquia valiosa que te otorga conocimientos ancestrales.',
-  'Trabajas como mercenario en una guerra épica, enfrentándote a desafíos con tu habilidad y coraje.',
-  'Eres un investigador de lo paranormal, descubriendo los secretos ocultos del mundo espiritual.',
-  'Entrenas dragones para carreras, formando vínculos con estas majestuosas criaturas aladas.',
-  'Te conviertes en el mejor herrero de la ciudad, forjando armas legendarias y artefactos poderosos.',
-  'Descubres un bosque encantado lleno de criaturas mágicas, estableciendo una conexión única con la naturaleza.',
-  'Eres un domador de bestias feroces, controlando a las criaturas más salvajes con tu dominio animal.',
-  'Viajas en el tiempo y resuelves problemas históricos, influyendo en el destino de civilizaciones pasadas.',
-  'Eres un asesor real, aportando sabiduría y consejo a gobernantes y líderes.',
-  'Desarrollas tecnología futurista, impulsando la innovación y cambiando el rumbo del mundo.',
-  'Eres un maestro en el arte de la persuasión, convenciendo a otros con tu elocuencia y astucia.',
-  'Piloteas un mecha gigante en batallas épicas, defendiendo la tierra con tu destreza en la máquina de guerra.',
-  'Diriges una granja de dragones, cuidando de estas majestuosas criaturas y criando dragones únicos.',
-  'Eres un espía internacional, infiltrándote en organizaciones secretas y desenmascarando complots oscuros.',
-  'Exploras el espacio y haces descubrimientos asombrosos que te otorgan una visión única del universo.',
-  'Eres un mago de renombre, realizando trucos impresionantes y conjurando hechizos mágicos.',
-  'Eres un científico loco, creando inventos extravagantes y experimentos inusuales.',
-  'Defiendes el reino contra un ejército invasor, liderando ejércitos y demostrando tu valentía en la batalla.',
-  'Eres un navegante audaz, explorando mares desconocidos y descubriendo islas llenas de tesoros.',
-  'Eres un maestro en el arte del sigilo, moviéndote en las sombras y realizando misiones secretas.',
-  'Eres un chef renombrado, creando platillos deliciosos que deleitan a los paladares de todo el mundo.',
-  'Investigas crímenes complejos como un detective hábil, resolviendo misterios intrigantes.',
-  'Eres un diplomático hábil, negociando tratados y alianzas para mantener la paz entre naciones.',
-  'Eres un chamán poderoso, canalizando energías espirituales para curar y proteger.',
-  'Desarrollas aplicaciones mágicas para dispositivos encantados, mejorando la vida de las personas con tus invenciones.',
-  'Eres un campeón en torneos de lucha, demostrando tu destreza en el combate mano a mano.',
-  'Eres un arquitecto visionario, diseñando ciudades futuristas y estructuras impresionantes.',
-  'Eres un psíquico con habilidades sobrenaturales, explorando las mentes y prediciendo el futuro.',
-  'Eres un famoso director de cine, creando historias épicas que cautivan a las audiencias.',
-  'Eres un astrónomo y descubres un nuevo planeta, ampliando nuestro conocimiento del cosmos.',
-  'Eres un experto en supervivencia, enfrentando los peligros del mundo con ingenio y valentía.',
-  'Eres un músico talentoso que toca en conciertos masivos, llenando el aire con melodías cautivadoras.',
-  'Eres un explorador submarino, sumergiéndote en las profundidades para descubrir tesoros olvidados.',
-  'Eres un diseñador de moda reconocido, creando tendencias y vistiendo a las personas con tu estilo único.',
-  'Eres un líder revolucionario, luchando por un mundo mejor y guiando a las masas hacia la libertad.',
-  'Eres un médico que descubre una cura para una enfermedad mortal, salvando innumerables vidas.',
-  'Eres un hacker informático, navegando por el ciberespacio y desvelando secretos digitales.',
-  'Eres un jardinero botánico que encuentra una planta rara, desentrañando sus propiedades únicas.',
-  'Eres un cazador de mitos, explorando leyendas y descubriendo la verdad detrás de los cuentos.',
-  'Eres un arqueólogo que desentierra una ciudad antigua, revelando los secretos de civilizaciones pasadas.',
-  'Eres un líder espiritual respetado, guiando a otros hacia la iluminación y la paz interior.',
-  'Eres un jugador profesional, compitiendo en torneos de élite y demostrando tu habilidad en los juegos.',
-];
+  "Você é um mestre alquimista, destilando poções misteriosas em busca de segredos perdidos.",
+  "Você se torna um intrépido caçador de tesouros, explorando lugares esquecidos em busca de riquezas escondidas.",
+  "Você dirige um negócio de transmutação de metais, transformando o comum em tesouros valiosos.",
+  "Você explora ruínas antigas e encontra uma relíquia valiosa que lhe concede conhecimentos ancestrais.",
+  "Você trabalha como mercenário em uma guerra épica, enfrentando desafios com sua habilidade e coragem.",
+  "Você é um pesquisador do paranormal, descobrindo os segredos ocultos do mundo espiritual.",
+  "Você treina dragões para corridas, formando laços com essas majestosas criaturas aladas.",
+  "Você se torna o melhor ferreiro da cidade, forjando armas lendárias e artefatos poderosos.",
+  "Você descobre uma floresta encantada cheia de criaturas mágicas, estabelecendo uma conexão única com a natureza.",
+  "Você é um domador de feras ferozes, controlando as criaturas mais selvagens com seu domínio animal.",
+  "Você viaja no tempo e resolve problemas históricos, influenciando o destino de civilizações passadas.",
+  "Você é um conselheiro real, fornecendo sabedoria e conselho a governantes e líderes.",
+  "Você desenvolve tecnologia futurista, impulsionando a inovação e mudando o rumo do mundo.",
+  "Você é um mestre na arte da persuasão, convencendo os outros com sua eloquência e astúcia.",
+  "Você pilota um mecha gigante em batalhas épicas, defendendo a terra com sua habilidade na máquina de guerra.",
+  "Você dirige uma fazenda de dragões, cuidando dessas majestosas criaturas e criando dragões únicos.",
+  "Você é um espião internacional, infiltrando-se em organizações secretas e desmascarando complôs sombrios.",
+  "Você explora o espaço e faz descobertas surpreendentes que lhe dão uma visão única do universo.",
+  "Você é um mágico renomado, realizando truques impressionantes e conjurando feitiços mágicos.",
+  "Você é um cientista louco, criando invenções extravagantes e experimentos incomuns.",
+  "Você defende o reino contra um exército invasor, liderando exércitos e demonstrando sua bravura na batalha.",
+  "Você é um navegador audaz, explorando mares desconhecidos e descobrindo ilhas cheias de tesouros.",
+  "Você é um mestre na arte do sigilo, movendo-se nas sombras e realizando missões secretas.",
+  "Você é um chef renomado, criando pratos deliciosos que encantam os paladares de todo o mundo.",
+  "Você investiga crimes complexos como um detetive habilidoso, resolvendo mistérios intrigantes.",
+  "Você é um diplomata habilidoso, negociando tratados e alianças para manter a paz entre as nações.",
+  "Você é um xamã poderoso, canalizando energias espirituais para curar e proteger.",
+  "Você desenvolve aplicativos mágicos para dispositivos encantados, melhorando a vida das pessoas com suas invenções.",
+  "Você é um campeão em torneios de luta, demonstrando sua habilidade em combate corpo a corpo.",
+  "Você é um arquiteto visionário, projetando cidades futuristas e estruturas impressionantes.",
+  "Você é um psíquico com habilidades sobrenaturais, explorando as mentes e prevendo o futuro.",
+  "Você é um famoso diretor de cinema, criando histórias épicas que cativam o público.",
+  "Você é um astrônomo e descobre um novo planeta, ampliando nosso conhecimento do cosmos.",
+  "Você é um especialista em sobrevivência, enfrentando os perigos do mundo com engenho e coragem.",
+  "Você é um músico talentoso que toca em concertos massivos, enchendo o ar com melodias cativantes.",
+  "Você é um explorador submarino, mergulhando nas profundidades para descobrir tesouros esquecidos.",
+  "Você é um designer de moda reconhecido, criando tendências e vestindo as pessoas com seu estilo único.",
+  "Você é um líder revolucionário, lutando por um mundo melhor e guiando as massas para a liberdade.",
+  "Você é um médico que descobre uma cura para uma doença mortal, salvando inúmeras vidas.",
+  "Você é um hacker de computador."
+]
+;

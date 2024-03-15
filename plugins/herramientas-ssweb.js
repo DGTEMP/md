@@ -1,12 +1,12 @@
 import fetch from 'node-fetch' 
 const handler = async (m, {conn, text, args}) => {   
-if (!args[0]) return conn.reply(m.chat, "*[ 🔎 ] Envie el comando más la url completa del sitio web.*", m);  
+if (!args[0]) return conn.reply(m.chat, "*[ 🔎 ] Envie o comando mais a url completa do site web.*", m);  
    try {
      const ss = await (await fetch(`https://image.thum.io/get/fullpage/${args[0]}`)).buffer();
         conn.sendFile(m.chat, ss, '', '', m);
    } catch { 
    try {  
-     const ss2 = `https://api.screenshotmachine.com/?key=c04d3a&url=${args[0]}&screenshotmachine.com&dimension=720x720`;  
+     const ss2 = `https://api.screenshotmachine.com/?key=c04d3a&url=${args[0]}&screenshotmachine.com&dimension=1080x1080`;  
         conn.sendMessage(m.chat, {image: {url: ss2}}, {quoted: m}); 
    } catch {  
    try { 
@@ -19,6 +19,7 @@ if (!args[0]) return conn.reply(m.chat, "*[ 🔎 ] Envie el comando más la url 
   }
  }
 }; 
+handler.register = true
 handler.help = ["ss", "ssf"].map((v) => v + " <url>");   
 handler.tags = ["internet"];   
 handler.command = /^ss(web)?f?$/i;   

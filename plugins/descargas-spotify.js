@@ -1,5 +1,5 @@
 // TheMystic-Bot-MD@BrunoSobrino - descargas-spotify.js
-// Creditos de los tags a @darlyn1234 y diseño a @ALBERTO9883
+// Creditos de los tags a @darlyn1234 y diseño a @AL
 import fetch from 'node-fetch';
 import fs from 'fs';
 import axios from 'axios';
@@ -63,7 +63,7 @@ const handler = async (m, { conn, text }) => {
     const img = await (await fetch(`${spty.data.cover_url}`)).buffer()  
     const letra_s = await find_lyrics(spty.data.name ? spty.data.name : '');
     let letra;
-    letra = `${letra_s ? letra_s + '\n\n🤴🏻 Descarga por BrunoSobrino & TheMystic-Bot-MD 🤖' : '🤴🏻 Descarga por BrunoSobrino & TheMystic-Bot-MD 🤖'}`  
+    letra = `${letra_s ? letra_s + '\n\n🤴🏻 Spy ne vd & TheSpy-Bot-MD 🤖' : '🤴🏻 Spy ne vd & TheSpy-Bot-MD 🤖'}`  
     const tags = {
       title: spty.data.name || '-',
       artist: artist,
@@ -88,7 +88,7 @@ const handler = async (m, { conn, text }) => {
         imageBuffer: await axios.get(spty.data.cover_url, {responseType: "arraybuffer"}).then((response) => Buffer.from(response.data, "binary")),
       },
       mimetype: 'image/jpeg',
-      copyright: 'Copyright Darlyn ©2023',
+      copyright: 'Copyright Blackxxx ©2024',
     };
     await fs.promises.writeFile(filePath, spty.audio);
     await NodeID3.write(tags, filePath);
@@ -97,12 +97,12 @@ const handler = async (m, { conn, text }) => {
          spotifyi += `	◦  *Artista:* ${spty.data.artists}\n`
          spotifyi += `	◦  *Album:* ${spty.data.album_name}\n`                 
          spotifyi += `	◦  *Publicado:* ${spty.data.release_date}\n\n`   
-         spotifyi += `El audio se esta enviando, espere un momento..`
+         spotifyi += `Já to mandado seu áudio, se demorar fds..`
     await conn.sendMessage(m.chat, {text: spotifyi.trim(), contextInfo: {forwardingScore: 9999999, isForwarded: true, "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm2, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "thumbnailUrl": img, "mediaUrl": linkDL, "sourceUrl": linkDL}}}, {quoted: m});
     await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg'}, {quoted: m});
   } catch (error) {
     console.error(error);
-    throw '*[❗] Error, no se encontraron resultados.*';
+    throw '*[❗] Erro, tudo indica que API foi de arrasta.*';
   }
 };
 handler.command = /^(spotify|music)$/i;

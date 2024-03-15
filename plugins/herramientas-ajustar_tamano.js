@@ -3,10 +3,10 @@ import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, command, args, text}) => {
   const q = m.quoted ? m.quoted : m;
   const mime = (q.msg || q).mimetype || '';
-  if (!mime) throw '⚠️️ Responde a una imagen o video.';
-  if (!text) throw '⚠️️ Ingrese el peso nuevo de la imágen/video.';
-  if (isNaN(text)) throw ' 🔢 sólo números';
-  if (!/image\/(jpe?g|png)|video|document/.test(mime)) throw `⚠️️ Formato no soportado`;
+  if (!mime) throw '⚠️️ Responda uma imagem ou video.';
+  if (!text) throw '⚠️️ Ingrese o novo tamanho da imagem ou video.';
+  if (isNaN(text)) throw ' 🔢 só números';
+  if (!/image\/(jpe?g|png)|video|document/.test(mime)) throw `⚠️️ Formato não suportado`;
   const img = await q.download();
   const url = await uploadImage(img);
 
@@ -18,5 +18,5 @@ const handler = async (m, {conn, usedPrefix, command, args, text}) => {
 };
 handler.tags = ['tools'];
 handler.help = ['tamaño <cantidad>'];
-handler.command = /^(length|filelength|edittamaño|totamaño|tamaño)$/i;
+handler.command = /^(length|filelength|edittamanho|totamanho|tamanho)$/i;
 export default handler;

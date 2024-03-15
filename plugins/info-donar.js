@@ -12,8 +12,14 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *┃*
 *┃* 👉🏻 *Spy ne vd*
 *┃*
+*┃* ➤ *Obrigado por apoiar o projeto*
+*┃* 
 *┃* ➤ *livepix.gg/luizaa*
 *┃*
+*┃* ➤ _Nesse link também encontrará_ 
+*┃*       _opções para o seu projeto_
+*┃* 
+*┃* 
 *┃ ➤ Papai Spy*   
 *┃*
 *┃ 👉🏻 𝙲𝙾𝙽𝚃𝙰𝙲𝚃*

@@ -1,9 +1,9 @@
 import gplay from "google-play-scraper";
 
 let handler = async (m, { conn, text }) => {
-  if (!text) throw "*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙺 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙱𝚄𝚂𝙲𝙰𝚁*";
+  if (!text) throw "*[❗] ME FALE O APP QUE DESEJA*";
   let res = await gplay.search({ term: text });
-  if (!res.length) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙺 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙱𝚄𝚂𝙲𝙰𝚁*`;
+  if (!res.length) throw `*[❗] ME FALE O APP QUE DESEJA BUSCAR*`;
   let opt = {
     contextInfo: {
       externalAdReply: {
@@ -18,9 +18,9 @@ let handler = async (m, { conn, text }) => {
   res = res.map(
     (v) =>
       `*🔍 Resultado:* ${v.title}
-       *✍️ Desarrollador:* ${v.developer}
-       *💸 Precio:* ${v.priceText}
-       *📈 Puntuacion:* ${v.scoreText}
+       *✍️ Desenvolvedor:* ${v.developer}
+       *💸 Preço:* ${v.priceText}
+       *📈 Puntuação:* ${v.scoreText}
         *⛓️ Link:* ${v.url}`
   ).join`\n\n`;
   m.reply(res, null, opt);

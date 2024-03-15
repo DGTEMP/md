@@ -14,16 +14,16 @@ global.owner = [
   ['554884702848', '👑 Spy - Criador 👑', true],
   ['554888767821', '💫 Blackxxx - Collaborador 1 💫', true],
   ['554891941092', '💫 spynevd - Collaborador 2 💫', true],
-  ['51996089079', '💫 Mystic - Collaborador 3 💫', true],
-  ['5218442286089', '💫 Mystic - Collaborador 4 💫', true],
-  ['50246028932', '💫 Mystic - Collaborador 5 💫', true],
-  ['5212412377467', '💫 Mystic - Collaborador 6 💫', true]
+  ['51996089079', '💫 Anonimous - Collaborador 3 💫', true],
+  ['5218442286089', '💫 Anonimous - Collaborador 4 💫', true],
+  ['50246028932', '💫 Anonimous - Collaborador 5 💫', true],
+  ['5212412377467', '💫 Anonimous - Collaborador 6 💫', true]
 ];
 
 global.suittag = ['554884702848'];
 global.prems = ['554884702848'];
 
-global.packname = 'Sticker';
+global.packname = '4884702848';
 global.author = 'Spy - Bot';
 global.wm = '@PapaiSpy';
 global.titulowm = 'Spy 4884702848';

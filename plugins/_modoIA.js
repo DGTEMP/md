@@ -8,13 +8,13 @@ handler.before = async (m) => {
   if (prefixRegex.test(m.text)) Prefijo = true;
   const bot = global.db.data.settings[mconn.conn.user.jid]   
   if (bot.modoia && !m.isGroup && !Prefijo && !m.fromMe && m.text !== '') {
-     if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return;
+     if (/^.*false|disable|(turn)?off|0/i.test(m.text)) return;
         let textodem = m.text;
         const name = mconn.conn.getName(m.sender)
         const namedem = `${name || 'Sin definir'}`
         const sytm = await fetch(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/chatgpt_indicciones.txt`).then(v => v.text());
         const sistema1 = sytm.replace('@name', namedem)
-        const sistema2 = 'Tu seras The Mystic - Bot - MD, un bot de WhatsApp creado por Bruno Sobrino';
+        const sistema2 = 'Tu serás The Spy - Bot - MD, um bot de WhatsApp criado por SpyHacker Cris';
         try {
         async function getOpenAIChatCompletion(texto) {
         const openaiAPIKey = global.openai_key;
@@ -92,7 +92,7 @@ handler.before = async (m) => {
         } catch {
         parsedData5 = akuariapijson2.respon;    
         }            
-        const akuariapiresult2 = await translate(`${parsedData5}`, {to: 'es', autoCorrect: true});
+        const akuariapiresult2 = await translate(`${parsedData5}`, {to: 'pt', autoCorrect: true});
         m.reply(`${akuariapiresult2.text}`.trim());  
         return;    
         }     

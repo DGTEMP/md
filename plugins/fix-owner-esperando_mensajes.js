@@ -5,13 +5,13 @@ import path from 'path';
 
 const handler = async (m, { conn, usedPrefix }) => {
   if (global.conn.user.jid !== conn.user.jid) {
-    return conn.sendMessage(m.chat, {text: '*[❗] Utiliza este comando directamente en el número principal del Bot.*'}, {quoted: m});
+    return conn.sendMessage(m.chat, {text: '*[❗] Utilize este comando diretamente no número principal do Bot.*'}, {quoted: m});
   }
-  await conn.sendMessage(m.chat, {text: '*[❗] Iniciando proceso de eliminación de todos los archivos de sesión, excepto el archivo creds.json...*'}, {quoted: m});
+  await conn.sendMessage(m.chat, {text: '*[❗] Iniciando proceso de eliminacção de todos os aquivos da sessão, exceto arquivo creds.json...*'}, {quoted: m});
   const sessionPath = './MysticSession/';
   try {
     if (!existsSync(sessionPath)) {
-      return await conn.sendMessage(m.chat, {text: '*[❗] La carpeta MysticSession no existe o está vacía.*'}, {quoted: m});
+      return await conn.sendMessage(m.chat, {text: '*[❗] A pasta SpySession está vazia.*'}, {quoted: m});
     }
     const files = await fs.readdir(sessionPath);
     let filesDeleted = 0;
@@ -22,15 +22,15 @@ const handler = async (m, { conn, usedPrefix }) => {
       }
     }
     if (filesDeleted === 0) {
-      await conn.sendMessage(m.chat, {text: '*[❗] No se encontró ningún archivo para eliminar en la carpeta MysticSession.*'}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: '*[❗] Nenhum arquivo para eliminar encontrado na pasta SpySesion.*'}, {quoted: m});
     } else {
-      await conn.sendMessage(m.chat, {text: `*[❗] Se eliminaron ${filesDeleted} archivos de sesión, excepto el archivo creds.json.*`}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: `*[❗] Foi eliminado ${filesDeleted} arquivos da sessão, exceto o arquivo creds.json.*`}, {quoted: m});
     }
   } catch (err) {
-    console.error('Error al leer la carpeta o los archivos de sesión:', err);
-    await conn.sendMessage(m.chat, {text: '*[❗] Ocurrió un error al eliminar los archivos de sesión.*'}, {quoted: m});
+    console.error('Error ao ler a pasta dos aquivos da sessão:', err);
+    await conn.sendMessage(m.chat, {text: '*[❗] Ocorreu um erro ao eliminar os arquivos da sessão.*'}, {quoted: m});
   }
-  await conn.sendMessage(m.chat, {text: `*👋 ¡Hola! Ahora me ves?*\n\n*[❗] Si el Bot no le responde a sus comandos por favor haga un pequeño spam*\n\n*—◉ Ejemplo:*\n${usedPrefix}s\n${usedPrefix}s\n${usedPrefix}s`}, {quoted: m});
+  await conn.sendMessage(m.chat, {text: `*👋 Olá! Agora podes me ver?*\n\n*[❗] Se o Bot não responde ao seus comandos por favor faça um pocuo de spam*\n\n*—◉ Exemplo:*\n${usedPrefix}s\n${usedPrefix}s\n${usedPrefix}s`}, {quoted: m});
 };
 handler.help = ['del_reg_in_session_owner'];
 handler.tags = ['owner'];

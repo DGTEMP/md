@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m, {text, usedPrefix, command}) => {
-  if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝚄𝙽 𝙿𝙰𝙸𝚂, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 ${usedPrefix + command} Mexico*`;
+  if (!text) throw `*[❗] INSIRA O NOME DE UM PAÍS ${usedPrefix + command} Brasil*`;
   const res = await fetch(global.API('https://covid19.mathdro.id', '/api/countries/'+ (text)));
   if (!res.ok) throw await res.text();
   const json = await res.json();
@@ -10,8 +10,8 @@ const handler = async (m, {text, usedPrefix, command}) => {
 🌏 País : ${text}
 ✅Confirmado : ${json.confirmed.value}
 📉curado : ${json.recovered.value}
-☠️Muertes : ${json.deaths.value}
-💌Info Actualizada : ${json.lastUpdate}
+☠️Mortes : ${json.deaths.value}
+💌Info Atualizada : ${json.lastUpdate}
 `.trim());
   } else throw json;
 };

@@ -2,12 +2,9 @@
 
         [ ❗ ] CREDITOS - NO MODIFICAR [ ❗ ]
 
-           Codigo hecho por @BrunoSobrino
-       Github: https://github.com/BrunoSobrino
+           Codigo hecho por @PapaiSpy
+       Github: https://github.com/SpyHackera
        
-       Nota: Solo hay disponibles efectos en
-       ingles, por lo que el texto en otros
-       idiomas puede sonar raro.
        
 //////////////////////////////////////////////*/
 
@@ -19,12 +16,12 @@ const handler = async (m, { conn, usedPrefix, command, text, args }) => {
 
   if (!efecto) {
     let voiceList = await getVoiceList();
-    let responseText = `*[❗] No haz ingresado un efecto, por favor ingresa un efecto de voz.*\n\n*—◉ Elige uno de los siguientes efectos:*\n`;
+    let responseText = `*[❗] Sem efeito selecionado, por favor.*\n\n*—◉ Escolha um dos seguintes efeitos:*\n`;
 
     for (let i = 0, count = 0; count < 100 && i < voiceList.resultado.length; i++) {
       const entry = voiceList.resultado[i];
       if (entry.ID.length <= 20) {
-        responseText += `*◉ ${usedPrefix + command} ${entry.ID} tu_texto_aquí*\n`;
+        responseText += `*◉ ${usedPrefix + command} ${entry.ID} teu_texto_aquí*\n`;
         count++;
       }
     }
@@ -41,9 +38,9 @@ const handler = async (m, { conn, usedPrefix, command, text, args }) => {
     }
   }
 
-  if (!efectoValido) return conn.sendMessage(m.chat, { text: `*[❗] El efecto proporcionado no existe en la lista, utiliza ${usedPrefix + command} para conocer la lista de efectos.*` }, { quoted: m });
+  if (!efectoValido) return conn.sendMessage(m.chat, { text: `*[❗] Esse efeito nem existe seu nóia, use ${usedPrefix + command} para conhecer a lista de efeitos.*` }, { quoted: m });
 
-  if (!texto) return conn.sendMessage(m.chat, {text: `*[❗] Ingresa el texto que quieras convertir a audio.*\n\n*—◉ Ejemplo:*\n*◉ ${usedPrefix + command} ${efecto} Hola, este es un ejemplo de uso del comando.*`}, {quoted: m});
+  if (!texto) return conn.sendMessage(m.chat, {text: `*[❗] Cade o texto para converter em audio?*\n\n*—◉ Exemplo:*\n*◉ ${usedPrefix + command} ${efecto} Salve salve calabresos, esse é um exemplo do comando.*`}, {quoted: m});
 
   let masivo = await makeTTSRequest(texto, efecto);
   conn.sendMessage(m.chat, {audio: {url: masivo.resultado}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
@@ -82,7 +79,7 @@ async function getVoiceList() {
     return { resultado: simplifiedList ? simplifiedList : '[❗] Error, no se obtuvo respuesta de la API.' };
   } catch (error) {
     console.error('Error:', error);
-    return { resultado: '[❗] Error, no se obtuvo respuesta de la API.' };
+    return { resultado: '[❗] Erro, não consegui resposta da API.' };
     throw error;
   }
 }
@@ -101,9 +98,9 @@ async function makeTTSRequest(texto, efecto) {
     const eventData = events.find(event => event.includes('"stage":"complete"'));
     const urlMatch = eventData.match(/"url":"([^"]+)"/);
     const url = urlMatch ? urlMatch[1] : null;
-    return { resultado: url ? url : '[❗] URL no encontrada en la respuesta.' };
+    return { resultado: url ? url : '[❗] URL não encontrada na resposta.' };
   } catch (error) {
     console.error('Error:', error);
-    return { resultado: '[❗] Error, no se obtuvo respuesta de la API.' };
+    return { resultado: '[❗] Foi mal, não consegui fechar parceria com a API.' };
   }
 }

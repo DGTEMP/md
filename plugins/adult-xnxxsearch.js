@@ -15,7 +15,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*[❗] Los comandos +1
     }
     const res = await xnxxsearch(text);
     const json = res.result;
-    let cap = `*🔍 RESULTADOS DE LA BUSQUEDA:* ${text.toUpperCase()}\n\n`;
+    let cap = `*🔍 RESULTADOS DA BUSCA:* ${text.toUpperCase()}\n\n`;
     let count = 1;
     for (const v of json) {
       const linkXXX = v.link;

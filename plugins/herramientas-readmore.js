@@ -6,6 +6,7 @@ const handler = async (m, {conn, text}) => {
 };
 handler.help = ['readmore', 'spoiler'].map((v) => v + ' <teks>|<teks>');
 handler.tags = ['tools'];
+handler.register = true
 handler.command = /^(spoiler|hidetext|readmore|selengkapnya)$/i;
 export default handler;
 

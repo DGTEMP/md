@@ -7,7 +7,7 @@
 import axios from 'axios';
 import cheerio from 'cheerio';
 let handler = async (m, { conn, text: tiktok, args, command, usedPrefix}) => {
-if (!tiktok) throw '*[❗] Ingresa un enlace de tiktok imagenes, ejemplo: "https://vm.tiktok.com/ZM2cqBRVS/".*';        
+if (!tiktok) throw '*[❗] Cole um link de tiktok imagens, exemplo: "https://vm.tiktok.com/ZM2cqBCVS/".*';        
 let imagesSent
 if (imagesSent) return;
 imagesSent = true    
@@ -20,7 +20,7 @@ for (let d of result) {
 imagesSent = false
 } catch {
     imagesSent = false    
-    throw '*[❗] No se obtuvo respuesta de la página, intente más tarde.*'
+    throw '*[❗] Não tive resposta da página, tente mais tarde.*'
  }
 };
 handler.command = /^(ttimg|tiktokimg)$/i;
@@ -37,11 +37,11 @@ async function ttimg(link) {
             imgSrc.push($(element).attr('src'));
         });
         if (imgSrc.length === 0) {
-            return { data: '*[❗] No se encontraron imágenes en el enlace proporcionado.*' };
+            return { data: '*[❗] Não foi encontrado imagens nesse link.*' };
         }
         return { data: imgSrc }; 
     } catch (error) {
         console.lo (error);
-        return { data: '*[❗] No se obtuvo respuesta de la página, intente más tarde.*'};
+        return { data: '*[❗] Não tive resposta da página, tente mais tarde.*'};
     };
 };

@@ -298,7 +298,7 @@ if (opcion == '1' || methodCodeQR) {
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./MysticSession/" + "creds.json")
+await fs.unlinkSync("./SpySession/" + "creds.json")
 console.log(chalk.bold.redBright(`[ ⚠ ] Conexão encerrada, Por favor espere un momento que vou reiniciar...\nSe der erro inicie com : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
@@ -363,14 +363,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = '👋 ¡Bienvenido/a!\n@user';
-  conn.bye = '👋 ¡Hasta luego!\n@user';
-  conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
+  conn.welcome = '👋 Salve salve!\n@user';
+  conn.bye = '👋 Já vai tarde corno!\n@user';
+  conn.spromote = '*[ ℹ️ ] @user Foi promovido a administrador.*';
   conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
-  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
-  conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
-  conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
-  conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
+  conn.sDesc = '*[ ℹ️ ] A descrição do grupo foi modificada.*';
+  conn.sSubject = '*[ ℹ️ ] O nome do grupo foi modificado.*';
+  conn.sIcon = '*[ ℹ️ ] O que acharam da nova foto do perfil?*';
+  conn.sRevoke = '*[ ℹ️ ] Link do  grupo foi restabelecido.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);

@@ -1,15 +1,15 @@
 import translate from '@vitalets/google-translate-api';
 import fetch from 'node-fetch';
 const handler = async (m, {conn, command}) => {
-  if (command === 'consejo') {
+  if (command === 'conselho') {
     const consejo = consejos[Math.floor(Math.random() * consejos.length)];
-    const mensaje = `╭─◆────◈⚘◈─────◆─╮\n\n⠀⠀🌟 *Consejo del día* 🌟\n\n❥ ${consejo}\n\n╰─◆────◈⚘◈─────◆─╯`;
+    const mensaje = `╭─◆────◈⚘◈─────◆─╮\n\n⠀⠀🌟 *Conselho do día* 🌟\n\n❥ ${consejo}\n\n╰─◆────◈⚘◈─────◆─╯`;
     await m.reply(mensaje);
   }
 
   if (command === 'fraseromantica') {
     const frase_romantica = frasesromanticas[Math.floor(Math.random() * frasesromanticas.length)];
-    const mensaje = `╭─◆────◈⚘◈─────◆─╮\n\n⠀⠀💖 *Frase romántica* 💖\n\n❥ ${frase_romantica}\n\n╰─◆────◈⚘◈─────◆─╯`;
+    const mensaje = `╭─◆────◈⚘◈─────◆─╮\n\n⠀⠀💖 *Frase romântica* 💖\n\n❥ ${frase_romantica}\n\n╰─◆────◈⚘◈─────◆─╯`;
     await m.reply(mensaje);
   }
 
@@ -31,7 +31,7 @@ ${storytime.text}`, m);
   }
 };
 handler.tags = ['frases'];
-handler.command = handler.help = ['consejo', 'fraseromantica', 'historiaromantica'];
+handler.command = handler.help = ['conselho', 'fraseromantica', 'historiaromantica'];
 export default handler;
 
 async function cerpen(category) {
@@ -63,77 +63,77 @@ async function cerpen(category) {
 }
 
 global.frasesromanticas = [
-  'Eres la luz que ilumina mi vida en la oscuridad.',
-  'Contigo, cada día es una nueva aventura llena de amor.',
-  'Tus ojos son el reflejo del cielo en el que quiero perderme.',
-  'Cada latido de mi corazón lleva tu nombre.',
-  'En tus brazos encontré el hogar que siempre busqué.',
-  'Eres el sueño que nunca quiero despertar.',
-  'El amor verdadero es estar juntos en las buenas y en las malas.',
-  'No existen distancias cuando dos corazones están unidos.',
-  'Tus besos son la melodía que acelera mi corazón.',
-  'Amar es ver en ti lo que nadie más puede ver.',
-  'En cada latido, te llevo conmigo a todas partes.',
-  'El amor que siento por ti es mi fuerza y mi inspiración.',
-  'Tus palabras dulces son mi alimento emocional diario.',
-  'Eres el regalo más preciado que la vida me ha dado.',
-  'El tiempo se detiene cuando estoy junto a ti.',
-  'En tu sonrisa encuentro la felicidad que buscaba.',
-  'Cada día a tu lado es una historia de amor sin fin.',
-  'Nuestro amor es como un cuento de hadas hecho realidad.',
-  'Tus abrazos son mi refugio en este mundo caótico.',
-  'Eres la razón por la que creo en el destino.',
-  'Amar es descubrir cada día algo nuevo que admiro en ti.',
-  'Tu amor es el lienzo en blanco donde pinto mi felicidad.',
-  'Contigo, el futuro es un camino lleno de promesas y sueños.',
-  'Eres el faro que guía mi corazón en la oscuridad.',
-  'La magia del amor se encuentra en cada gesto que compartimos.',
-  'Nuestro amor es un baile eterno de pasión y ternura.',
-  'En tus brazos, el mundo entero desaparece y solo existimos tú y yo.',
-  'El amor es el idioma en el que nuestros corazones conversan.',
-  'Eres el pedacito que me faltaba para completar mi alma.',
-  'Amar es encontrar en ti todo lo que nunca supe que necesitaba.',
-];
+  "Você é a luz que ilumina minha vida na escuridão.",
+  "Com você, cada dia é uma nova aventura cheia de amor.",
+  "Seus olhos são o reflexo do céu no qual quero me perder.",
+  "Cada batida do meu coração leva o seu nome.",
+  "Em seus braços, encontrei o lar que sempre procurei.",
+  "Você é o sonho do qual nunca quero acordar.",
+  "O verdadeiro amor é estar juntos nas alegrias e nas tristezas.",
+  "Não existem distâncias quando dois corações estão unidos.",
+  "Seus beijos são a melodia que acelera meu coração.",
+  "Amar é ver em você o que ninguém mais pode ver.",
+  "Em cada batida, levo você comigo para todos os lugares.",
+  "O amor que sinto por você é minha força e minha inspiração.",
+  "Suas palavras doces são meu alimento emocional diário.",
+  "Você é o presente mais precioso que a vida me deu.",
+  "O tempo para quando estou com você.",
+  "Em seu sorriso, encontro a felicidade que procurava.",
+  "Cada dia ao seu lado é uma história de amor sem fim.",
+  "Nosso amor é como um conto de fadas tornado realidade.",
+  "Seus abraços são meu refúgio neste mundo caótico.",
+  "Você é a razão pela qual acredito no destino.",
+  "Amar é descobrir a cada dia algo novo que admiro em você.",
+  "Seu amor é a tela em branco onde pinto minha felicidade.",
+  "Com você, o futuro é um caminho cheio de promessas e sonhos.",
+  "Você é o farol que guia meu coração na escuridão.",
+  "A magia do amor se encontra em cada gesto que compartilhamos.",
+  "Nosso amor é uma dança eterna de paixão e ternura.",
+  "Em seus braços, o mundo inteiro desaparece e só existimos você e eu.",
+  "O amor é a língua na qual nossos corações conversam.",
+  "Você é o pedacinho que faltava para completar minha alma.",
+  "Amar é encontrar em você tudo o que nunca soube que precisava."
+]
 
 global.consejos = [
-  'Acepta que los cambios son parte natural de la vida, y aprende a adaptarte a ellos.',
-  'Nunca dejes de aprender; el conocimiento es una herramienta poderosa.',
-  'Cuida de tu salud física y mental, son fundamentales para una vida plena.',
-  'Disfruta de las pequeñas cosas, pues son ellas las que dan sentido a la vida.',
-  'Aprende a perdonar, tanto a los demás como a ti mismo, para liberar tu corazón.',
-  'Valora el tiempo que pasas con tus seres queridos, es el regalo más valioso que puedes dar y recibir.',
-  'Sé amable y compasivo con los demás, cada acto de bondad puede marcar la diferencia en sus vidas.',
-  'Aprende a decir \'no\' cuando sea necesario, y establece límites saludables.',
-  'Encuentra tiempo para hacer lo que te apasiona, pues eso nutre tu alma y te hace sentir vivo.',
-  'No te compares con los demás, cada persona tiene su propio camino y ritmo en la vida.',
-  'Escucha a tu pareja con empatía y comprensión, la comunicación es la base de una relación sólida.',
-  'No tengas miedo de expresar tus sentimientos, la honestidad es esencial en el amor.',
-  'Aprende a ceder y a comprometerte, el amor requiere de sacrificio y esfuerzo mutuo.',
-  'Sorprende a tu pareja de vez en cuando, mantén viva la chispa del romance.',
-  'Respeta la individualidad de tu pareja y permítele crecer como persona.',
-  'El amor propio es igual de importante que amar a alguien más; cuídate y valórate.',
-  'Recuerda que una relación sana se basa en la confianza mutua y el respeto.',
-  'Elige a alguien que te complemente y te haga ser una mejor versión de ti mismo.',
-  'El amor verdadero no te hace sentir menos, te hace sentir más.',
-  'Amar es un verbo, es una elección diaria que se cultiva con acciones y palabras.',
-  'Encuentra un trabajo que te apasione, y nunca sentirás que estás trabajando.',
-  'Sé proactivo y toma la iniciativa en tu trabajo, eso será valorado por tus superiores.',
-  'Aprende de tus errores y fracasos, son oportunidades para crecer y mejorar.',
-  'Mantén una actitud positiva y busca soluciones ante los desafíos laborales.',
-  'Cultiva buenas relaciones con tus colegas, el trabajo en equipo es clave para el éxito.',
-  'Establece metas claras y realistas, y trabaja con determinación para alcanzarlas.',
-  'No tengas miedo de pedir ayuda o buscar mentoría, siempre hay algo nuevo que aprender.',
-  'Reconoce y valora tus logros, celebra tus éxitos por pequeños que sean.',
-  'Busca un equilibrio entre tu vida laboral y personal, ambos aspectos son importantes.',
-  'El trabajo es una parte importante de tu vida, pero no es lo único que define quién eres.',
-  'Cree en ti mismo y en tu capacidad para lograr lo que te propongas.',
-  'Visualiza tus metas y sueños, imagina cómo te sentirás al alcanzarlos.',
-  'Encuentra inspiración en aquellos que han superado obstáculos similares a los tuyos.',
-  'Acepta los fracasos como parte del proceso, son oportunidades para aprender y crecer.',
-  'Rodéate de personas positivas y que te impulsen hacia adelante.',
-  'Mantén una mentalidad abierta y dispuesta a aprender cosas nuevas.',
-  'Recuerda por qué empezaste cuando te sientas desmotivado; reconecta con tu propósito.',
-  'Divide tus metas en pequeños pasos, eso hará el camino más alcanzable y menos abrumador.',
-  'No tengas miedo de perseguir tus sueños, la vida es demasiado corta para vivir con arrepentimientos.',
-  'Confía en que, con esfuerzo y perseverancia, puedes lograr todo lo que te propongas.',
+  "Aceite que as mudanças são parte natural da vida e aprenda a se adaptar a elas.",
+  "Nunca pare de aprender; o conhecimento é uma ferramenta poderosa.",
+  "Cuide da sua saúde física e mental, são fundamentais para uma vida plena.",
+  "Aproveite as pequenas coisas, pois são elas que dão sentido à vida.",
+  "Aprenda a perdoar, tanto os outros quanto a si mesmo, para libertar seu coração.",
+  "Valorize o tempo que passa com seus entes queridos, é o presente mais valioso que você pode dar e receber.",
+  "Seja gentil e compassivo com os outros, cada ato de bondade pode fazer a diferença em suas vidas.",
+  "Aprenda a dizer 'não' quando necessário e estabeleça limites saudáveis.",
+  "Encontre tempo para fazer o que você ama, pois isso nutre sua alma e faz você se sentir vivo.",
+  "Não se compare com os outros, cada pessoa tem seu próprio caminho e ritmo na vida.",
+  "Ouça seu parceiro com empatia e compreensão, a comunicação é a base de um relacionamento sólido.",
+  "Não tenha medo de expressar seus sentimentos, a honestidade é essencial no amor.",
+  "Aprenda a ceder e a comprometer-se, o amor requer sacrifício e esforço mútuo.",
+  "Surpreenda seu parceiro de vez em quando, mantenha viva a chama do romance.",
+  "Respeite a individualidade do seu parceiro e permita que ele cresça como pessoa.",
+  "O amor próprio é tão importante quanto amar alguém mais; cuide-se e valorize-se.",
+  "Lembre-se de que um relacionamento saudável se baseia na confiança mútua e no respeito.",
+  "Escolha alguém que te complemente e te faça ser uma versão melhor de si mesmo.",
+  "O verdadeiro amor não te faz sentir menos, te faz sentir mais.",
+  "Amar é um verbo, é uma escolha diária que se cultiva com ações e palavras.",
+  "Encontre um trabalho que você ame, e você nunca sentirá que está trabalhando.",
+  "Seja proativo e tome a iniciativa no seu trabalho, isso será valorizado pelos seus superiores.",
+  "Aprenda com seus erros e fracassos, são oportunidades para crescer e melhorar.",
+  "Mantenha uma atitude positiva e busque soluções para os desafios de trabalho.",
+  "Cultive boas relações com seus colegas, o trabalho em equipe é a chave para o sucesso.",
+  "Estabeleça metas claras e realistas e trabalhe com determinação para alcançá-las.",
+  "Não tenha medo de pedir ajuda ou buscar mentoria, sempre há algo novo para aprender.",
+  "Reconheça e valorize suas conquistas, celebre seus sucessos, por menores que sejam.",
+  "Busque um equilíbrio entre sua vida profissional e pessoal, ambos os aspectos são importantes.",
+  "O trabalho é uma parte importante da sua vida, mas não é a única coisa que define quem você é.",
+  "Acredite em si mesmo e na sua capacidade de alcançar o que você se propõe.",
+  "Visualize suas metas e sonhos, imagine como você se sentirá ao alcançá-los.",
+  "Encontre inspiração naqueles que superaram obstáculos semelhantes aos seus.",
+  "Aceite os fracassos como parte do processo, são oportunidades para aprender e crescer.",
+  "Cerque-se de pessoas positivas e que te impulsionem para a frente.",
+  "Mantenha uma mentalidade aberta e disposta a aprender coisas novas.",
+  "Lembre-se de por que começou quando se sentir desmotivado; reconecte-se com seu propósito.",
+  "Divida suas metas em pequenos passos, isso tornará o caminho mais alcançável e menos avassalador.",
+  "Não tenha medo de perseguir seus sonhos, a vida é muito curta para viver com arrependimentos.",
+  "Confie que, com esforço e perseverança, você pode alcançar tudo o que se propõe."
 ];

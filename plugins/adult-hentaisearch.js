@@ -14,11 +14,11 @@ ${i+1}. *_${v.title}_*
     randomThumbnail = searchResults.result[randomIndex].thumbnail;
   } else {
     randomThumbnail = 'https://pictures.hentai-foundry.com/e/Error-Dot/577798/Error-Dot-577798-Zero_Two.png';
-    teks = '*[❗] 𝙽𝙾 𝚂𝙴 𝙷𝙰𝙽 𝙴𝙽𝙲𝙾𝙽𝚃𝚁𝙰𝙳𝙾 𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾𝚂*';
+    teks = '*[❗] 𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾𝚂 𝙽𝙰𝙾 𝙴𝙽𝙲𝙾𝙽𝚃𝚁𝙰𝙳𝙾*';
   }
   conn.sendFile(m.chat, randomThumbnail, 'error.jpg', teks, m);
 };
-handler.command = /^(hentaisearch|searchhentai)$/i;
+handler.command = /^(hentaisearch|shentai)$/i;
 export default handler;
 async function searchHentai(search) {
   return new Promise((resolve, reject) => {

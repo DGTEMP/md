@@ -1,11 +1,11 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*🚀 -----[ Cafirexos]------- 🚀*
+  const text = `*🚀 -----[ spy ne vd ]------- 🚀*
   
- *Hola a todos 👋🏻 ¡Estamos emocionados de anunciar nuestra nueva colaboración con Cafirexos  🤖 Ahora ya pueden tener su propio bot de THE-MYSTIC-BOT-MD en su plataforma en línea, permitiendo  que tus bots estén activos las 24/7. 💻*
+ *Olá a todos 👋🏻 ¡Estamos emocionados de anunciar nosso novo colaborador Cafirexos  🤖 Agora já podem ter seu próprio bot de THE-SPY-BOT-MD nessa plataforma, permitindo  que teus bots estejam ativos 24/7. 💻*
 
-_La instalación de estas versiones ha sido aprobada y ya está en pleno funcionamiento. Además, *los servidores son totalmente compatibles, lo que te permite elegir el tipo de inicio del bot según tus necesidades.* ¡Prepárate para una experiencia de usuario ininterrumpida y emocionante!_ 
+_A instalação dessas versões foi aprovada e já está totalmente operacional. Além disso, *os servidores são totalmente suportados, permitindo que você escolha o tipo de inicialização do bot de acordo com suas necessidades.* Prepare-se para uma experiência de usuário ininterrupta e emocionante!_ 
 
 *Página oficial:*
 https://www.cafirexos.com/
@@ -17,19 +17,19 @@ https://dash.cafirexos.com
 https://panel.cafirexos.com
 
 *WhatsApp*
-https://wa.me/50497150165
+https://wa.me/554888767821
 
-*Correo electrónico*
+*Correio eletrônico*
 contacto@cafirexos.com
 
-*Canal de WhatsApp*
+*Canal do WhatsApp*
 https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q
 
-*¿Dudas? (UNICAMENTE SOBRE EL HOST):*
+*Dúvidas? (UNICAMENTE SOBRE A HOST):*
 https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ
 `.trim();
   const buttonMessage= {
-    'document': {url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`},
+    'document': {url: `https://github.com/CrisAmorim27/bot`},
     'mimetype': `application/${document}`,
     'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
     'fileLength': 99999999999999,
@@ -38,13 +38,13 @@ https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ
       'forwardingScore': 200,
       'isForwarded': true,
       'externalAdReply': {
-        'mediaUrl': 'https://github.com/BrunoSobrino/TheMystic-Bot-MD',
+        'mediaUrl': 'https://github.com/CrisAmorim27/bot',
         'mediaType': 2,
         'previewType': 'pdf',
-        'title': 'El Mejor Hosting 🚀⁩',
+        'title': 'A Melhor Hosting 🚀⁩',
         'body': wm,
         'thumbnail': imagen1,
-        'sourceUrl': 'https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q'}},
+        'sourceUrl': 'https://wa.me/554884702848'}},
     'caption': text,
     'footer': wm,
     // 'buttons':[
@@ -54,4 +54,5 @@ https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ
   conn.sendMessage(m.chat, buttonMessage, {quoted: m});
 }; 
 handler.command = ['host', 'cafirexos'];
+handler.register = true
 export default handler;

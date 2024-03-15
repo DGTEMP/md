@@ -50,14 +50,14 @@ fakeData.name_tag = text //`@${m.mentionedJid[0].split('@')[0]}` //conn.getName(
 fakeData.name_tag = text    
 }
     
-const doxeo = `*[ ✔ ] Persona doxxeada con éxito.*\n\n*—◉ Doxxeo realizado en:*\n*◉ ${executionTime} segundos.*\n*—◉ Resultados obtenidos del doxxeo:*
+const doxeo = `*[ ✔ ] @user localizado com éxito.*\n\n*—◉ Ação doxx realizado em:*\n*◉ ${executionTime} segundos.*\n*—◉ Resultados obtidos do traqueamento:*
 
-*Nombre:* ${fakeData.name_tag}
+*Nome:* ${fakeData.name_tag}
 *Ip:* ${fakeData.ip}
 *N:* ${fakeData.n}
 *W:* ${fakeData.w}
 *SS NUMBER:* ${fakeData.ssNumber}
-*CAMARA DEL CELULAR:* ${fakeData.fakeCameraLink}
+*CAMERA DO CELULAR:* ${fakeData.fakeCameraLink}
 *IPV6:* ${fakeData.ipv6}
 *UPNP:* ${fakeData.upnp}
 *DMZ:* ${fakeData.dmz}
@@ -105,7 +105,7 @@ loading()
 };
 handler.help = ['doxear <nombre> | <@tag>'];
 handler.tags = ['fun'];
-handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
+handler.command = /^Doxxeo|spynevd|doxxear|Doxxear|hackear|doxear|hackearme|doxeame/i;
 export default handler;
 
 function getRandomValue(arr) {

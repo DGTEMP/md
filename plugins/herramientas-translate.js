@@ -1,7 +1,7 @@
 import translate from '@vitalets/google-translate-api';
 import fetch from 'node-fetch';
 const handler = async (m, {args, usedPrefix, command}) => {
-  const msg = `*[❗𝐈𝐍𝐅𝐎❗] 𝚄𝚂𝙾 𝙲𝙾𝚁𝚁𝙴𝚃𝙾 ${usedPrefix + command} (idioma) (texto)*\n*𝙴x𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} pt Hello*\n\n*Lista de idiomas permitidos por enquanto:*\n*- https://cloud.google.com/translate/docs/languages*`;
+  const msg = `*[❗𝐈𝐍𝐅𝐎❗] 𝚄𝚂𝙾 𝙲𝙾𝚁𝚁𝙴𝚃𝙾 ${usedPrefix + command} (idioma) (texto)*\n*𝙴x𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} pt Olá*\n\n*Lista de idiomas permitidos por enquanto:*\n*- https://cloud.google.com/translate/docs/languages*`;
   if (!args || !args[0]) return m.reply(msg);
   let lang = args[0];
   let text = args.slice(1).join(' ');
@@ -25,5 +25,6 @@ const handler = async (m, {args, usedPrefix, command}) => {
     }
   }
 };
+handler.register = true
 handler.command = /^(translate|traduzir|trad)$/i;
 export default handler;

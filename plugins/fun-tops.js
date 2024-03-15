@@ -16,7 +16,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
 
   if (command == 'topgays') {
     const vn = './media/gay2.mp3';
-    const top = `*🌈TOP 10 GAYS/LESBIANAS DEL GRUPO🌈*
+    const top = `*🌈TOP 10 GAYS/LESBICAS DESSE GRUPO🌈*
     
 *_1.- ${user(a)}_*
 *_2.- ${user(b)}_*
@@ -35,7 +35,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
 
   if (command == 'topotakus') {
     const vn = './media/otaku.mp3';
-    const top = `*🌸 TOP 10 OTAKUS DEL GRUPO 🌸*
+    const top = `*🌸 TOP 10 OTAKUS DO GRUPO 🌸*
     
 *_1.- ${user(a)}_*
 *_2.- ${user(b)}_*

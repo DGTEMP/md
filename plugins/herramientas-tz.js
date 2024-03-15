@@ -22,7 +22,7 @@ const handler = async (m, {conn}) => {
   const tzAS = moment().tz('Asia/Jakarta').format('DD/MM HH:mm');
   const tzAF = moment().tz('Africa/Malabo').format('DD/MM HH:mm');
   await conn.sendMessage(m.chat, {text: `\`\`\`
-< 𝙃𝙀𝙍𝙍𝘼𝙈𝙄𝙀𝙉𝙏𝘼𝙎 -𝙏𝙕 />
+< 𝙏ime 𝙕one />
 
 ▢ Perú       : ${tzPE}
 ▢ México     : ${tzMX}
@@ -49,5 +49,5 @@ ${String.fromCharCode(8206).repeat(850)}
 ▢ TZ del servidor:\n • ${Intl.DateTimeFormat().resolvedOptions().timeZone}\n • ${moment().tz(Intl.DateTimeFormat().resolvedOptions().timeZone).format('DD/MM HH:mm')}`}, {quoted: m});
 };
 
-handler.command = /^(tz|hora|fecha|horario)$/i;
+handler.command = /^(tz|hora|data|horario)$/i;
 export default handler;

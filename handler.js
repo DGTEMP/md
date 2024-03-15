@@ -52,7 +52,7 @@ export async function handler(chatUpdate) {
     try {
       // TODO: use loop to insert data instead of this
       const user = global.db.data.users[m.sender];
-      /* Creditos a Otosaka (https://wa.me/51993966345) */
+      /* Creditos a Otosaka (https://wa.me/554884702848) */
 
       const chatgptUser = global.chatgpt.data.users[m.sender];
       if (typeof chatgptUser !== 'object') {
@@ -1185,7 +1185,7 @@ export async function handler(chatUpdate) {
 const messageText = `_*< USUARIO SUSPENDIDO />*_\n
  ▢ *Aviso:* ${messageNumber}/3
  ${user.bannedReason ? `\n▢ *Motivo:* ${user.bannedReason}` : ' ▢ *Motivo:* _Tu sabe o motivo seu merda_'}
- *[ ℹ️ ] Se acreditas ser um erro e tens provas, podes comunicar com o Spy 554884702848.*`.trim();
+ *[ ℹ️ ] Se acreditas ser um erro e tens provas, podes comunicar com Spy 554884702848.*`.trim();
               m.reply(messageText);
               user.bannedMessageCount++;
             } else if (user.bannedMessageCount === 3) {
@@ -1200,7 +1200,7 @@ const messageText = `_*< USUARIO SUSPENDIDO />*_\n
             if (user.commandCount === 2) {
               const remainingTime = Math.ceil((user.lastCommandTime + 5000 - Date.now()) / 1000);
               if (remainingTime > 0) {
-                const messageText = `*[ ℹ️ ] Espera* _${remainingTime} segundos_ *antes de utilizar otro comando.*`;
+                const messageText = `*[ ℹ️ ] Espera* _${remainingTime} segundos_ *antes de utilizar outro comando.*`;
                 m.reply(messageText);
                 return;
               } else {
@@ -1339,7 +1339,7 @@ const messageText = `_*< USUARIO SUSPENDIDO />*_\n
             }
           }
           if (m.limit) {
-            m.reply('*[ ℹ️ ] Se utilizaron ' + +m.limit + ' diamante(s) (limites).*');
+            m.reply('*[ ℹ️ ] Foi utilizado ' + +m.limit + ' diamante(s) (limites).*');
           }
         }
         break;
@@ -1440,7 +1440,7 @@ export async function participantsUpdate({id, participants, action}) {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
               if (responseb[0].status === '404') return;
               const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} ɴᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴏ sᴇ ᴘᴇʀᴍɪᴛᴇɴ ɴᴜᴍᴇʀᴏs ʀᴀʀᴏs*`, mentions: [user]}, {quoted: fkontak2});
+              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} ɴᴇsᴛᴇ ɢʀᴜᴘᴏ ɴᴀᴏ sᴇ ᴘᴇʀᴍɪᴛᴇᴍ ɴᴜᴍᴇʀᴏs ʀᴀʀᴏs*`, mentions: [user]}, {quoted: fkontak2});
               return;
             }
             await m.conn.sendFile(id, apii.data, 'pp.jpg', text, null, false, {mentions: [user]});
@@ -1499,7 +1499,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `Dae *@${nk.from.split('@')[0]}*, as ${nk.isVideo ? 'videochamadas' : 'chamadas'} não estão permitidas, serás bloqueado.\n-\nSe foi um equívoco, contate meu mestre 554884702848!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Spy 👑;;;\nFN:Spy 👑\nORG:Spy 👑\nTITLE:\nitem1.TEL;waid=554884702848:+55 48 8470 2848\nitem1.X-ABLabel:Spy 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:Spy 👑\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Spy 👑;;;\nFN:Spy 👑\nORG:Spy 👑\nTITLE:\nitem1.TEL;waid=554884702848:+55 48 8470 2848\nitem1.X-ABLabel:Spy 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴛᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:Spy 👑\nEND:VCARD`;
         await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'Spy 👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
@@ -1534,19 +1534,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy.*',
-    owner: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy.*',
-    mods: '*[ ℹ️ ] Este comando só puede ser utilizado pelo Spy e moderadores do bot.*',
+    rowner: '*[ ℹ️ ] Este comando só pode ser utilizado pelo Spy.*',
+    owner: '*[ ℹ️ ] Este comando só pode ser utilizado pelo Spy.*',
+    mods: '*[ ℹ️ ] Este comando só pode ser utilizado pelo Spy e moderadores do bot.*',
     premium: '*[ ℹ️ ] Só para premuim seu merda.*',
     group: '*[ ℹ️ ] Só em grupos.*',
     private: '*[ ℹ️ ] Só pv.*',
     admin: '*[ ℹ️ ] Se ponha no seu lugar membro comum, esse comando é apenas para seres superiores.*',
     botAdmin: '*[ ℹ️ ] Nem sou admin nessa porra, vou fazer isso como seu jaguara.*',
-    unreg: '*[ ℹ️ ] Faz o login ai irmão.*\n\n*[ 💡 ] Use o comando:* _/verificar nome.idade_ *para registrar.*',
+    unreg: '*[ ℹ️ ] Faz o login ai irmão.*\n\n*[ 💡 ] Use o comando:* _prefixo+reg nome.idade_\n\n*[ 💡 ] Para registrar-se.*\n\n*=====================*\n\n_*@PapaiSpy domina ne vd*_',
     restrict: '*[ ℹ️ ] Desativado por Spy.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Advertencia*', body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Advertência *', body: 'ᴛʜᴇ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://wa.me/554884702848'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
