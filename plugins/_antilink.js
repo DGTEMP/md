@@ -1,4 +1,4 @@
-// TheMystic-Bot-MD@BrunoSobrino - _antilink.js
+// TheSpy-Bot-MD@PapaiSpy - _antilink.js
 
 import _translate from './_translate.js';
 const tradutor = _translate.plugins._antilink
