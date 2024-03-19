@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const handler = async (m, {conn, text, usedPrefix, command}) => {
   if (!text) {
-    throw `_*< SPY - IA - BARD />*_\n\n*[ ℹ️ ] Pergunte algo.*\n\n*[ 💡 ] Exemplo:* _${usedPrefix + command} Olá, como estás?_`;
+    throw `_*< SPY - IA - GEMINI />*_\n\n*[ ℹ️ ] Pergunte algo.*\n\n*[ 💡 ] Exemplo:* _${usedPrefix + command} Olá, tenho dúvida a respeito disso..._`;
   }
 
   try {
@@ -16,13 +16,13 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
       const respuestaAPI = data.data;
       conn.reply(m.chat, respuestaAPI, m);
     } else {
-      throw '_*< SPY - IA - BARD - GEMINI />*_\n\n*[ ℹ️ ] Não consegui encontrar uma resposta válida.*';
+      throw '_*< SPY - IA - GEMINI />*_\n\n*[ ℹ️ ] Não consegui encontrar uma resposta válida.*';
     }
   } catch (error) {
     throw `_*< SPY />*_\n\n*[ ℹ️ ] ERRO, Por favor contate meu mestre Spy 554884702848.*`;
   }
 };
 
-handler.command = /^spy$/i;
+handler.command = /^gemini$/i;
 
 export default handler;

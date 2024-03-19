@@ -152,7 +152,7 @@ const optionsFull = `_*< FUNÇOES do BOT />*_\n
 
 ▢ *Opção:* 🤖 | MODOIA
 ▢ *Comando:* ${usedPrefix + command} modoia
-▢ *Descrição:* Se ativa o modo "Inteligencia Artificial" com ChatGPT em todos os chats privados.
+▢ *Descrição:* Ativa o modo "Inteligencia Artificial" com ChatGPT em todos os chats privados.
 ▢ *Nota:* Este comando só pode ser usado pelo Spy.
 
 --------------------------------
